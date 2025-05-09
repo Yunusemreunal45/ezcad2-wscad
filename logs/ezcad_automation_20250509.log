@@ -662,3 +662,4 @@ AttributeError: 'EZCADAutomationApp' object has no attribute '_start_monitoring'
 2025-05-09 18:10:43,742 - WARNING - Running in non-Windows environment. EZCAD features will be simulated.
 2025-05-09 18:15:23,774 - WARNING - Running in non-Windows environment. EZCAD features will be simulated.
 2025-05-09 18:16:55,671 - WARNING - Running in non-Windows environment. EZCAD features will be simulated.
+2025-05-09 18:18:10,377 - WARNING - Running in non-Windows environment. EZCAD features will be simulated.
