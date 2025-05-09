@@ -1,5 +1,5 @@
 import tkinter as tk
-from tkinter import ttk, filedialog, messagebox, scrolledtext
+from tkinter import ttk, filedialog, messagebox, scrolledtext, simpledialog
 import os
 import threading
 import queue
@@ -511,6 +511,32 @@ class EZCADAutomationApp:
             self.logger.error(f"Failed to send {command.upper()} command: {str(e)}")
             messagebox.showerror("Error", f"Failed to send {command.upper()} command")
             self.status_var.set("Command failed")
+
+    def _start_monitoring(self):
+        """Start directory monitoring"""
+        # Apply current settings
+        self.config.set('Monitoring', 'enabled', 'true')
+        self.config.set('Monitoring', 'watch_directory', self.watch_dir_var.get())
+        self.config.set('Monitoring', 'recursive', str(self.recursive_var.get()))
+        self.config.set('Settings', 'auto_trigger', str(self.auto_trigger_var.get()))
+        self.config.set('Settings', 'file_pattern_excel', self.excel_pattern_var.get())
+        self.config.set('Settings', 'file_pattern_ezd', self.ezd_pattern_var.get())
+        self.config.save_config()
+
+        # Start the directory watcher
+        if self.directory_watcher.start_watching():
+            self.start_monitoring_button.config(state=tk.DISABLED)
+            self.stop_monitoring_button.config(state=tk.NORMAL)
+            self.status_var.set("Monitoring active")
+
+            # Start job processing if not already running
+            if not self.queue_manager.should_run:
+                self.queue_manager.start_processing()
+
+            # Add log to events text
+            self._add_event("Monitoring started: " + self.watch_dir_var.get())
+        else:
+            messagebox.showerror("Error", "Failed to start monitoring")
 
     def _process_excel(self):
         """Process the selected Excel file"""
