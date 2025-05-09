@@ -485,24 +485,30 @@ def _send_command(self, command):
         messagebox.showerror("Error", "No active EZCAD window")
         return
     
-    # Show status
-    self.status_var.set(f"Sending {command} command...")
-    self.root.update_idletasks()
-    
-    # Send command through the controller
-    success = self.ezcad_controller.send_command(self.current_window_id, command)
-    
-    if success:
-        self.logger.info(f"Sent {command.upper()} command to EZCAD")
-        self.status_var.set(f"{command.upper()} command sent successfully")
+    try:
+        # Show status
+        self.status_var.set(f"Sending {command} command...")
+        self.root.update_idletasks()
         
-        # Automatically handle any post-command tasks
-        if command.lower() == 'mark':
-            # Update job status or counters if needed
-            self.logger.info("Mark operation completed")
-            self.status_var.set("Mark operation completed")
-    else:
-        self.logger.error(f"Failed to send {command.upper()} command")
+        # Send command through the controller
+        success = self.ezcad_controller.send_command(self.current_window_id, command)
+        
+        if success:
+            self.logger.info(f"Sent {command.upper()} command to EZCAD")
+            self.status_var.set(f"{command.upper()} command sent successfully")
+            
+            # Automatically handle any post-command tasks
+            if command.lower() == 'mark':
+                self.logger.info("Mark operation completed")
+                self.status_var.set("Mark operation completed")
+            elif command.lower() == 'red':
+                self.logger.info("Red laser operation completed")
+                self.status_var.set("Red laser operation completed")
+        else:
+            raise Exception("Command failed to send")
+            
+    except Exception as e:
+        self.logger.error(f"Failed to send {command.upper()} command: {str(e)}")
         messagebox.showerror("Error", f"Failed to send {command.upper()} command")
         self.status_var.set("Command failed")
     

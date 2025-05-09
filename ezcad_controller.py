@@ -62,17 +62,22 @@ class EZCADController:
             for _ in range(15):
                 time.sleep(1)
                 try:
-                    # Try to find and accept license dialog
-                    app = Application(backend="win32").connect(title_re=".*License.*|.*Agreement.*|.*Terms.*")
-                    license_win = app.top_window()
-                    agree_button = license_win.child_window(title_re=".*agree.*|.*Kabul.*|.*Annehmen.*|.*同意.*", control_type="Button")
-                    if agree_button.exists():
-                        license_win.set_focus()
-                        agree_button.click()
-                        time.sleep(0.5)
-                        license_win.minimize()
-                        time.sleep(0.2)
-                        license_win.type_keys('{ENTER}', set_foreground=False)
+                    # Try to find and accept license dialog more aggressively
+                    app = Application(backend="win32").connect(title_re=".*License.*|.*Agreement.*|.*Terms.*|.*EZCAD.*")
+                    for window in app.windows():
+                        try:
+                            if any(text in window.window_text() for text in ["License", "Agreement", "Terms"]):
+                                window.set_focus()
+                                # Try multiple ways to accept
+                                for button in window.children():
+                                    if any(text in button.window_text().lower() for text in ["agree", "accept", "ok", "yes", "kabul"]):
+                                        button.click()
+                                        time.sleep(0.2)
+                                # Press Enter for good measure
+                                window.type_keys('{ENTER}')
+                                time.sleep(0.2)
+                        except Exception as e:
+                            self.logger.debug(f"Window handling error: {str(e)}")
                     
                     # Try to connect to the EZCAD window
                     if ezd_file:
