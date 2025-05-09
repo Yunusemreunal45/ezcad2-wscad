@@ -97,17 +97,23 @@ class EZCADController:
                     return False
 
                 window = instance['window']
+                if not window.is_visible():
+                    window.restore()
+                    time.sleep(0.5)
+                
+                window.set_focus()
+                time.sleep(0.5)
+                
                 command = command.lower()
-
                 if command == 'red':
                     window.type_keys("{F1}")
                     self.logger.info(f"Sent RED command to window {window_id}")
-                    time.sleep(1.0)  # Increased delay
+                    time.sleep(1.5)  # Increased delay
                     return True
                 elif command == 'mark':
                     window.type_keys("{F2}")
                     self.logger.info(f"Sent MARK command to window {window_id}")
-                    time.sleep(1.0)  # Increased delay
+                    time.sleep(1.5)  # Increased delay
                     return True
                 else:
                     self.logger.warning(f"Unknown command: {command}")
