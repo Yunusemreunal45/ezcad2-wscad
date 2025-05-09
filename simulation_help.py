@@ -94,6 +94,24 @@ class SimulationHelpWindow:
             self.window.mainloop()
         # For Toplevel windows, they're shown automatically
 
+class SimulationHelper:
+    """Helper class for simulating EZCAD operations in non-Windows environments"""
+
+    @staticmethod
+    def simulate_ezcad_start():
+        """Simulate starting EZCAD"""
+        return True
+
+    @staticmethod
+    def simulate_command(command):
+        """Simulate sending a command to EZCAD"""
+        return True
+
+    @staticmethod
+    def simulate_close():
+        """Simulate closing EZCAD"""
+        return True
+
 def show_simulation_info(parent=None):
     """Show simulation mode information"""
     if not PlatformUtils.is_windows():
