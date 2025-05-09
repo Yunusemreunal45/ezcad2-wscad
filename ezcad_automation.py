@@ -142,8 +142,23 @@ class EZCADAutomationApp:
         self.mark_button = ttk.Button(control_frame, text="Mark", command=lambda: self._send_command('mark'), state=tk.DISABLED)
         self.mark_button.pack(side=tk.LEFT, padx=5)
 
-        self.process_button = ttk.Button(control_frame, text="Process Excel", command=self.process_excel)
+        self.process_button = ttk.Button(control_frame, text="Process Excel", command=self._process_excel)
         self.process_button.pack(side=tk.LEFT, padx=5)
+
+    def _process_excel(self):
+        """Process the selected Excel file"""
+        excel_file = self.excel_path_var.get()
+        if not excel_file:
+            messagebox.showerror("Error", "Please select an Excel file first")
+            return
+
+        self.logger.info(f"Processing Excel file: {excel_file}")
+        try:
+            result = self.processor.process_file(excel_file)
+            messagebox.showinfo("Success", f"Excel file processed successfully.\nRows processed: {result.get('rows_processed', 0)}")
+        except Exception as e:
+            self.logger.error(f"Failed to process Excel file: {str(e)}")
+            messagebox.showerror("Error", f"Failed to process Excel file: {str(e)}")
 
         self.select_window_button = ttk.Button(control_frame, text="Select EZCAD Window", command=self._select_ezcad_window)
         self.select_window_button.pack(side=tk.LEFT, padx=5)
