@@ -55,6 +55,15 @@ class EZCADController:
             for _ in range(15):
                 time.sleep(1)
                 try:
+                    # Try to find and handle the I Agree dialog first
+                    try:
+                        agree_app = Application().connect(title_re=".*I Agree.*")
+                        agree_window = agree_app.top_window()
+                        agree_window.type_keys("{ENTER}")
+                        time.sleep(0.5)
+                    except:
+                        pass
+
                     if ezd_file:
                         ezd_name = os.path.basename(ezd_file).replace(".", "\.")
                         app = Application().connect(title_re=f".*{ezd_name}.*")
@@ -62,6 +71,8 @@ class EZCADController:
                         app = Application().connect(title_re=f".*EZCAD2.*")
 
                     window = app.top_window()
+                    window.set_focus()
+                    time.sleep(0.5)
                     window_id = f"ezcad_{int(time.time() * 1000)}"
 
                     with self.lock:
@@ -112,14 +123,18 @@ class EZCADController:
                         
                     command = command.lower()
                     if command == 'red':
+                        window.set_focus()
+                        time.sleep(0.5)
                         window.type_keys("{F1}")
                         self.logger.info(f"Sent RED command to window {window_id}")
-                        time.sleep(2.0)  # Increased delay for stability
+                        time.sleep(2.5)  # Increased delay for stability
                         return True
                     elif command == 'mark':
+                        window.set_focus()
+                        time.sleep(0.5)
                         window.type_keys("{F2}")
                         self.logger.info(f"Sent MARK command to window {window_id}")
-                        time.sleep(2.0)  # Increased delay for stability
+                        time.sleep(2.5)  # Increased delay for stability
                         return True
                 except Exception as e:
                     self.logger.error(f"Window control error: {str(e)}")
