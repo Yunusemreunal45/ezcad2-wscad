@@ -112,30 +112,33 @@ class EZCADController:
                     if not window.is_visible():
                         window.restore()
                         time.sleep(1.0)
-                    
-                    # Make sure window is active
+
                     window.set_focus()
                     time.sleep(1.0)
-                    
-                    # Check if window is ready
+
                     if not window.is_active():
+                        self.logger.error("EZCAD window is not active after set_focus()")
                         raise Exception("EZCAD window is not active")
-                        
+
                     command = command.lower()
                     if command == 'red':
                         window.set_focus()
                         time.sleep(0.5)
                         window.type_keys("{F1}")
                         self.logger.info(f"Sent RED command to window {window_id}")
-                        time.sleep(2.5)  # Increased delay for stability
+                        time.sleep(2.5)
                         return True
                     elif command == 'mark':
                         window.set_focus()
                         time.sleep(0.5)
+                        self.logger.info("Sending {F2} to EZCAD window")
                         window.type_keys("{F2}")
                         self.logger.info(f"Sent MARK command to window {window_id}")
-                        time.sleep(2.5)  # Increased delay for stability
+                        time.sleep(2.5)
                         return True
+                    else:
+                        self.logger.warning(f"Unknown command: {command}")
+                        return False
                 except Exception as e:
                     self.logger.error(f"Window control error: {str(e)}")
                     return False
