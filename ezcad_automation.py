@@ -145,21 +145,6 @@ class EZCADAutomationApp:
         self.process_button = ttk.Button(control_frame, text="Process Excel", command=self._process_excel)
         self.process_button.pack(side=tk.LEFT, padx=5)
 
-    def _process_excel(self):
-        """Process the selected Excel file"""
-        excel_file = self.excel_path_var.get()
-        if not excel_file:
-            messagebox.showerror("Error", "Please select an Excel file first")
-            return
-
-        self.logger.info(f"Processing Excel file: {excel_file}")
-        try:
-            result = self.processor.process_file(excel_file)
-            messagebox.showinfo("Success", f"Excel file processed successfully.\nRows processed: {result.get('rows_processed', 0)}")
-        except Exception as e:
-            self.logger.error(f"Failed to process Excel file: {str(e)}")
-            messagebox.showerror("Error", f"Failed to process Excel file: {str(e)}")
-
         self.select_window_button = ttk.Button(control_frame, text="Select EZCAD Window", command=self._select_ezcad_window)
         self.select_window_button.pack(side=tk.LEFT, padx=5)
 
@@ -494,38 +479,38 @@ class EZCADAutomationApp:
             self.logger.error(f"Error starting EZCAD: {str(e)}")
             self.root.after(0, lambda: messagebox.showerror("Error", f"Error starting EZCAD: {str(e)}"))
 
-def _send_command(self, command):
-    """Send a command to the active EZCAD window"""
-    if not hasattr(self, 'current_window_id'):
-        messagebox.showerror("Error", "No active EZCAD window")
-        return
+    def _send_command(self, command):
+        """Send a command to the active EZCAD window"""
+        if not hasattr(self, 'current_window_id'):
+            messagebox.showerror("Error", "No active EZCAD window")
+            return
 
-    try:
-        # Show status
-        self.status_var.set(f"Sending {command} command...")
-        self.root.update_idletasks()
+        try:
+            # Show status
+            self.status_var.set(f"Sending {command} command...")
+            self.root.update_idletasks()
 
-        # Send command through the controller
-        success = self.ezcad_controller.send_command(self.current_window_id, command)
+            # Send command through the controller
+            success = self.ezcad_controller.send_command(self.current_window_id, command)
 
-        if success:
-            self.logger.info(f"Sent {command.upper()} command to EZCAD")
-            self.status_var.set(f"{command.upper()} command sent successfully")
+            if success:
+                self.logger.info(f"Sent {command.upper()} command to EZCAD")
+                self.status_var.set(f"{command.upper()} command sent successfully")
 
-            # Automatically handle any post-command tasks
-            if command.lower() == 'mark':
-                self.logger.info("Mark operation completed")
-                self.status_var.set("Mark operation completed")
-            elif command.lower() == 'red':
-                self.logger.info("Red laser operation completed")
-                self.status_var.set("Red laser operation completed")
-        else:
-            raise Exception("Command failed to send")
+                # Automatically handle any post-command tasks
+                if command.lower() == 'mark':
+                    self.logger.info("Mark operation completed")
+                    self.status_var.set("Mark operation completed")
+                elif command.lower() == 'red':
+                    self.logger.info("Red laser operation completed")
+                    self.status_var.set("Red laser operation completed")
+            else:
+                raise Exception("Command failed to send")
 
-    except Exception as e:
-        self.logger.error(f"Failed to send {command.upper()} command: {str(e)}")
-        messagebox.showerror("Error", f"Failed to send {command.upper()} command")
-        self.status_var.set("Command failed")
+        except Exception as e:
+            self.logger.error(f"Failed to send {command.upper()} command: {str(e)}")
+            messagebox.showerror("Error", f"Failed to send {command.upper()} command")
+            self.status_var.set("Command failed")
 
     def _process_excel(self):
         """Process the selected Excel file"""
