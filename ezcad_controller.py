@@ -53,9 +53,15 @@ class EZCADController:
                     return None
                 cmd.append(ezd_file)
             
-            # Start EZCAD
+            # Start EZCAD with better error handling
             self.logger.info(f"Starting EZCAD2: {' '.join(cmd)}")
-            os.spawnv(os.P_NOWAIT, exe_path, cmd)
+            try:
+                process = os.spawnv(os.P_NOWAIT, exe_path, cmd)
+                if process:
+                    self.logger.info("EZCAD2 process started successfully")
+            except Exception as e:
+                self.logger.error(f"Failed to start EZCAD2 process: {str(e)}")
+                return None
             
             # Handle license agreement dialog
             # Butonları aktifleştir

@@ -7,7 +7,7 @@ from platform_utils import PlatformUtils
 
 # Import the compatible version for all platforms
 # It will handle platform-specific behavior internally
-from ezcad_automation_compat import EZCADAutomationApp
+from ezcad_automation import EZCADAutomationApp
 
 def setup_exception_logging():
     """Setup global exception handler to log unhandled exceptions"""
