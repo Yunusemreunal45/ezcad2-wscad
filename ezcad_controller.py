@@ -102,12 +102,12 @@ class EZCADController:
                 if command == 'red':
                     window.type_keys("{F1}")
                     self.logger.info(f"Sent RED command to window {window_id}")
-                    time.sleep(0.5)
+                    time.sleep(1.0)  # Increased delay
                     return True
                 elif command == 'mark':
                     window.type_keys("{F2}")
                     self.logger.info(f"Sent MARK command to window {window_id}")
-                    time.sleep(0.5)
+                    time.sleep(1.0)  # Increased delay
                     return True
                 else:
                     self.logger.warning(f"Unknown command: {command}")
