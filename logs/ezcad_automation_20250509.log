@@ -659,3 +659,4 @@ Traceback (most recent call last):
 AttributeError: 'EZCADAutomationApp' object has no attribute '_start_monitoring'
 2025-05-09 18:05:00,811 - WARNING - Running in non-Windows environment. EZCAD features will be simulated.
 2025-05-09 18:07:37,560 - WARNING - Running in non-Windows environment. EZCAD features will be simulated.
+2025-05-09 18:10:43,742 - WARNING - Running in non-Windows environment. EZCAD features will be simulated.

@@ -1,0 +1,51 @@
+AttributeError: 'EZCADAutomationApp' object has no attribute 'process_excel'
+2025-05-09 18:02:28,030 - WARNING - Running in non-Windows environment. EZCAD features will be simulated.
+2025-05-09 18:02:28,053 - CRITICAL - Unhandled exception
+Traceback (most recent call last):
+  File "/home/runner/workspace/main.py", line 84, in <module>
+    main()
+  File "/home/runner/workspace/main.py", line 75, in main
+    app = EZCADAutomationApp(root)
+          ^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/runner/workspace/ezcad_automation.py", line 44, in __init__
+    self._create_ui()
+  File "/home/runner/workspace/ezcad_automation.py", line 67, in _create_ui
+    self._create_monitor_tab(monitor_tab)
+  File "/home/runner/workspace/ezcad_automation.py", line 195, in _create_monitor_tab
+    self.start_monitoring_button = ttk.Button(monitor_control_frame, text="Start Monitoring", command=self._start_monitoring)
+                                                                                                      ^^^^^^^^^^^^^^^^^^^^^^
+AttributeError: 'EZCADAutomationApp' object has no attribute '_start_monitoring'
+2025-05-09 18:05:00,811 - WARNING - Running in non-Windows environment. EZCAD features will be simulated.
+2025-05-09 18:07:37,560 - WARNING - Running in non-Windows environment. EZCAD features will be simulated.
+2025-05-09 18:10:43,742 - WARNING - Running in non-Windows environment. EZCAD features will be simulated.
+2025-05-09 21:12:19,258 - INFO - EZCAD2.exe path set: C:/Users/yunus/Desktop/Ezcad2.14.11(20230924)/EzCad2.exe
+2025-05-09 21:12:42,898 - INFO - Loading Excel file: C:/Users/yunus/Desktop/Ezcad2.14.11(20230924)/names.xls
+2025-05-09 21:12:42,916 - INFO - Excel file loaded successfully: C:/Users/yunus/Desktop/Ezcad2.14.11(20230924)/names.xls
+2025-05-09 21:12:42,917 - DEBUG - Excel dimensions: 5 rows, 11 columns
+2025-05-09 21:12:52,633 - INFO - EZD file selected: C:/Users/yunus/Desktop/DGAtestmakina2dekafiks.ezd
+2025-05-09 21:12:59,300 - ERROR - Error selecting EZCAD window: No active EZCAD instances found
+2025-05-09 21:13:02,256 - INFO - Processing Excel file: C:/Users/yunus/Desktop/Ezcad2.14.11(20230924)/names.xls
+2025-05-09 21:13:02,256 - INFO - Loading Excel file: C:/Users/yunus/Desktop/Ezcad2.14.11(20230924)/names.xls
+2025-05-09 21:13:02,260 - INFO - Excel file loaded successfully: C:/Users/yunus/Desktop/Ezcad2.14.11(20230924)/names.xls
+2025-05-09 21:13:02,261 - DEBUG - Excel dimensions: 5 rows, 11 columns
+2025-05-09 21:13:05,747 - INFO - Processing Excel file: C:/Users/yunus/Desktop/Ezcad2.14.11(20230924)/names.xls
+2025-05-09 21:13:05,748 - INFO - Loading Excel file: C:/Users/yunus/Desktop/Ezcad2.14.11(20230924)/names.xls
+2025-05-09 21:13:05,752 - INFO - Excel file loaded successfully: C:/Users/yunus/Desktop/Ezcad2.14.11(20230924)/names.xls
+2025-05-09 21:13:05,752 - DEBUG - Excel dimensions: 5 rows, 11 columns
+2025-05-09 21:13:11,057 - INFO - Starting EZCAD with file: C:/Users/yunus/Desktop/DGAtestmakina2dekafiks.ezd
+2025-05-09 21:13:11,798 - INFO - EZCAD2 process started successfully
+2025-05-09 21:13:12,839 - DEBUG - Waiting for EZCAD window: {'title_re': '.*DGAtestmakina2dekafiks\\.ezd.*', 'backend': 'win32', 'visible_only': False}
+2025-05-09 21:13:13,896 - DEBUG - Waiting for EZCAD window: {'title_re': '.*DGAtestmakina2dekafiks\\.ezd.*', 'backend': 'win32', 'visible_only': False}
+2025-05-09 21:13:14,933 - DEBUG - Waiting for EZCAD window: {'title_re': '.*DGAtestmakina2dekafiks\\.ezd.*', 'backend': 'win32', 'visible_only': False}
+2025-05-09 21:13:15,961 - DEBUG - Waiting for EZCAD window: {'title_re': '.*DGAtestmakina2dekafiks\\.ezd.*', 'backend': 'win32', 'visible_only': False}
+2025-05-09 21:13:17,004 - DEBUG - Waiting for EZCAD window: {'title_re': '.*DGAtestmakina2dekafiks\\.ezd.*', 'backend': 'win32', 'visible_only': False}
+2025-05-09 21:13:18,042 - DEBUG - Waiting for EZCAD window: {'title_re': '.*DGAtestmakina2dekafiks\\.ezd.*', 'backend': 'win32', 'visible_only': False}
+2025-05-09 21:13:19,071 - DEBUG - Waiting for EZCAD window: {'title_re': '.*DGAtestmakina2dekafiks\\.ezd.*', 'backend': 'win32', 'visible_only': False}
+2025-05-09 21:13:20,100 - DEBUG - Waiting for EZCAD window: {'title_re': '.*DGAtestmakina2dekafiks\\.ezd.*', 'backend': 'win32', 'visible_only': False}
+2025-05-09 21:13:21,127 - DEBUG - Waiting for EZCAD window: {'title_re': '.*DGAtestmakina2dekafiks\\.ezd.*', 'backend': 'win32', 'visible_only': False}
+2025-05-09 21:13:23,306 - INFO - EZCAD2 started with window ID: ezcad_1746814403306
+2025-05-09 21:13:23,308 - INFO - EZCAD started successfully with window ID: ezcad_1746814403306
+2025-05-09 21:13:31,276 - ERROR - Error sending command mark to window ezcad_1746814403306: Handle 1182458 is not a vaild window handle
+2025-05-09 21:13:31,276 - ERROR - Failed to send MARK command: Command failed to send
+2025-05-09 21:13:43,722 - ERROR - Error sending command red to window ezcad_1746814403306: Handle 1182458 is not a vaild window handle
+2025-05-09 21:13:43,724 - ERROR - Failed to send RED command: Command failed to send
