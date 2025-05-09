@@ -58,6 +58,10 @@ class EZCADController:
             os.spawnv(os.P_NOWAIT, exe_path, cmd)
             
             # Handle license agreement dialog
+            # Butonları aktifleştir
+            self.root.after(0, lambda: self.red_button.config(state=tk.NORMAL))
+            self.root.after(0, lambda: self.mark_button.config(state=tk.NORMAL))
+            
             window_id = None
             for _ in range(15):
                 time.sleep(1)
@@ -188,12 +192,14 @@ class EZCADController:
                 
                 window = instance['window']
                 
+                time.sleep(0.5)  # Komut göndermeden önce kısa bir gecikme
                 if command.lower() == 'red':
                     window.type_keys("{F1}")
                     self.logger.info(f"Sent RED command to window {window_id}")
                 elif command.lower() == 'mark':
                     window.type_keys("{F2}")
                     self.logger.info(f"Sent MARK command to window {window_id}")
+                time.sleep(0.5)  # Komut gönderdikten sonra kısa bir gecikme
                 # Add more commands as needed
                 else:
                     self.logger.warning(f"Unknown command: {command}")
