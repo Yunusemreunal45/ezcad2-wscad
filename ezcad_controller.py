@@ -2,9 +2,12 @@ import os
 import time
 import psutil
 import logging
-from pywinauto.application import Application
 import subprocess
 import threading
+from platform_utils import PlatformUtils, IS_WINDOWS
+
+if IS_WINDOWS:
+    from pywinauto.application import Application
 
 class EZCADController:
     """Control EZCAD2 application instances"""
@@ -21,6 +24,9 @@ class EZCADController:
         self.logger = logger or logging.getLogger('EZCADAutomation')
         self.instances = {}  # Store active EZCAD instances: window_id -> info
         self.lock = threading.Lock()  # For thread safety
+        
+        if not IS_WINDOWS:
+            self.logger.warning("Running in non-Windows environment. EZCAD features will be simulated.")
     
     def start_ezcad(self, ezd_file=None):
         """
