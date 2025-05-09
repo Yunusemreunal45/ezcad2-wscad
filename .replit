@@ -1,0 +1,41 @@
+modules = ["python-3.11"]
+
+[nix]
+channel = "stable-24_05"
+packages = ["glibcLocales"]
+
+[workflows]
+runButton = "Project"
+
+[[workflows.workflow]]
+name = "Project"
+mode = "parallel"
+author = "agent"
+
+[[workflows.workflow.tasks]]
+task = "workflow.run"
+args = "EZCAD Automation"
+
+[[workflows.workflow.tasks]]
+task = "workflow.run"
+args = "default"
+
+[[workflows.workflow]]
+name = "EZCAD Automation"
+author = "agent"
+
+[[workflows.workflow.tasks]]
+task = "shell.exec"
+args = "pip install pandas pywinauto watchdog psutil && python main.py"
+waitForPort = 5000
+
+[[workflows.workflow]]
+name = "default"
+author = "agent"
+
+[[workflows.workflow.tasks]]
+task = "shell.exec"
+args = "python main.py"
+
+[deployment]
+run = ["sh", "-c", "pip install pandas pywinauto watchdog psutil && python main.py"]

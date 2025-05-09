@@ -1,196 +1,241 @@
-# EZCAD Otomasyon Uygulaması (Flowchart Temelli Yeniden Yapılandırma)
+"""
+EZCAD2 GUI Automation Map
 
-import tkinter as tk
-from tkinter import filedialog, messagebox
-import os
-import pandas as pd
-from pywinauto.application import Application
-import configparser
-import time
-import psutil
+This file defines the structure and UI elements of the EZCAD2 application
+for automation purposes. It provides a mapping of UI element identifiers 
+that can be used with PyWinAuto to automate interactions with EZCAD2.
 
-class EZCADApp:
-    def __init__(self, root):
-        self.root = root
-        self.config_file = "ezcad_config.ini"
-        self.load_config()
+For more information on how to use these identifiers with PyWinAuto, see:
+https://pywinauto.readthedocs.io/en/latest/
+"""
 
-        root.title("EZCAD - Excel & EZD Seçici")
+# Main application window identifiers
+EZCAD_MAIN_WINDOW = {
+    'title': 'EZCAD2',
+    'class_name': '#32770',
+    'control_type': 'Dialog'
+}
 
-        # EZCAD2.exe seçimi
-        tk.Label(root, text="EZCAD2.exe Yolu:").grid(row=0, column=0, sticky="w", padx=10, pady=5)
-        self.ezcad_exe_var = tk.StringVar(value=self.ezcad_exe_path or "")
-        tk.Entry(root, textvariable=self.ezcad_exe_var, width=60).grid(row=0, column=1, padx=5)
-        tk.Button(root, text="exe Seç", command=self.select_ezcad_exe).grid(row=0, column=2, padx=5)
+# Main toolbar buttons
+TOOLBAR_BUTTONS = {
+    'red': {
+        'control_id': 1056,  # This ID may vary, verify with spy tool
+        'title': 'Red',
+        'class_name': 'Button'
+    },
+    'mark': {
+        'control_id': 1057,  # This ID may vary, verify with spy tool
+        'title': 'Mark',
+        'class_name': 'Button'
+    },
+    'test': {
+        'control_id': 1058,  # This ID may vary, verify with spy tool
+        'title': 'Test',
+        'class_name': 'Button'
+    },
+    'stop': {
+        'control_id': 1059,  # This ID may vary, verify with spy tool
+        'title': 'Stop',
+        'class_name': 'Button'
+    },
+    'save': {
+        'control_id': 1060,  # This ID may vary, verify with spy tool
+        'title': 'Save',
+        'class_name': 'Button'
+    }
+}
 
-        # Excel dosyası seçimi
-        tk.Label(root, text="Excel (.xls) Dosyası:").grid(row=1, column=0, sticky="w", padx=10, pady=5)
-        self.excel_path_var = tk.StringVar()
-        tk.Entry(root, textvariable=self.excel_path_var, width=60).grid(row=1, column=1, padx=5)
-        tk.Button(root, text="xls Seç", command=self.select_excel).grid(row=1, column=2, padx=5)
+# Menu identifiers
+MENU_ITEMS = {
+    'file': {
+        'title': 'File',
+        'item_id': 0  # Item position in menu bar (0-based index)
+    },
+    'edit': {
+        'title': 'Edit',
+        'item_id': 1
+    },
+    'view': {
+        'title': 'View',
+        'item_id': 2
+    },
+    'draw': {
+        'title': 'Draw',
+        'item_id': 3
+    },
+    'tools': {
+        'title': 'Tools',
+        'item_id': 4
+    },
+    'options': {
+        'title': 'Options',
+        'item_id': 5
+    },
+    'help': {
+        'title': 'Help',
+        'item_id': 6
+    }
+}
 
-        # EZD dosyası seçimi
-        tk.Label(root, text="EZCAD (.ezd) Dosyası:").grid(row=2, column=0, sticky="w", padx=10, pady=5)
-        self.ezd_path_var = tk.StringVar()
-        tk.Entry(root, textvariable=self.ezd_path_var, width=60).grid(row=2, column=1, padx=5)
-        tk.Button(root, text="ezd Seç", command=self.select_ezd).grid(row=2, column=2, padx=5)
+# File menu subitems
+FILE_MENU_ITEMS = {
+    'new': {
+        'title': 'New',
+        'item_id': 0
+    },
+    'open': {
+        'title': 'Open',
+        'item_id': 1
+    },
+    'save': {
+        'title': 'Save',
+        'item_id': 2
+    },
+    'save_as': {
+        'title': 'Save As',
+        'item_id': 3
+    },
+    'exit': {
+        'title': 'Exit',
+        'item_id': 7  # Position may vary
+    }
+}
 
-        # Excel önizleme
-        tk.Label(root, text="Excel Önizleme (ilk 5 satır, 10 sütun):").grid(row=3, column=0, columnspan=3, sticky="w", padx=10, pady=(10, 0))
-        self.preview_box = tk.Text(root, height=8, width=90)
-        self.preview_box.grid(row=4, column=0, columnspan=3, padx=10, pady=5)
+# Dialog identifiers
+DIALOGS = {
+    'open_file': {
+        'title': 'Open',
+        'class_name': '#32770'
+    },
+    'save_file': {
+        'title': 'Save As',
+        'class_name': '#32770'
+    },
+    'parameters': {
+        'title': 'Parameters',
+        'class_name': '#32770'
+    },
+    'marking_options': {
+        'title': 'Marking Options',
+        'class_name': '#32770'
+    }
+}
 
-        # Butonlar
-        button_frame = tk.Frame(root)
-        button_frame.grid(row=5, column=0, columnspan=3, pady=10)
+# Status bar identifiers
+STATUS_BAR = {
+    'class_name': 'msctls_statusbar32',
+    'control_id': 59648  # This ID may vary
+}
 
-        self.red_button = tk.Button(button_frame, text="Red", state=tk.DISABLED, command=self.send_red)
-        self.red_button.pack(side=tk.LEFT, padx=10)
+# Common keyboard shortcuts
+KEYBOARD_SHORTCUTS = {
+    'new_file': '^n',  # Ctrl+N
+    'open_file': '^o',  # Ctrl+O
+    'save_file': '^s',  # Ctrl+S
+    'undo': '^z',  # Ctrl+Z
+    'redo': '^y',  # Ctrl+Y
+    'cut': '^x',  # Ctrl+X
+    'copy': '^c',  # Ctrl+C
+    'paste': '^v',  # Ctrl+V
+    'select_all': '^a',  # Ctrl+A
+    'delete': '{DELETE}',  # Delete key
+    'escape': '{ESC}'  # Escape key
+}
 
-        self.mark_button = tk.Button(button_frame, text="Mark", state=tk.DISABLED, command=self.send_mark)
-        self.mark_button.pack(side=tk.LEFT, padx=10)
+# Function key mappings
+FUNCTION_KEYS = {
+    'f1': '{F1}',  # Help
+    'f2': '{F2}',  # Rename
+    'f3': '{F3}',  # Find Next
+    'f4': '{F4}',  # Repeat
+    'f5': '{F5}',  # Refresh
+    'f6': '{F6}',  # Next Pane
+    'f7': '{F7}',  # Check Spelling
+    'f8': '{F8}',  # Run
+    'f9': '{F9}',  # Compile
+    'f10': '{F10}',  # Menu
+    'f11': '{F11}',  # Full Screen
+    'f12': '{F12}'  # Save As
+}
 
-        self.select_window_button = tk.Button(button_frame, text="EZCAD Penceresini Seç", command=self.select_ezcad_window)
-        self.select_window_button.pack(side=tk.LEFT, padx=10)
+# Parameter dialog elements
+PARAMETER_DIALOG_ELEMENTS = {
+    'power': {
+        'control_id': 1001,  # This ID may vary, verify with spy tool
+        'class_name': 'Edit'
+    },
+    'speed': {
+        'control_id': 1002,  # This ID may vary, verify with spy tool
+        'class_name': 'Edit'
+    },
+    'frequency': {
+        'control_id': 1003,  # This ID may vary, verify with spy tool
+        'class_name': 'Edit'
+    },
+    'ok_button': {
+        'control_id': 1,  # Common OK button ID
+        'class_name': 'Button',
+        'title': 'OK'
+    },
+    'cancel_button': {
+        'control_id': 2,  # Common Cancel button ID
+        'class_name': 'Button',
+        'title': 'Cancel'
+    }
+}
 
-        self.run_button = tk.Button(button_frame, text="Aktar (EZCAD Başlat)", command=self.run_ezcad)
-        self.run_button.pack(side=tk.LEFT, padx=10)
+# Main drawing area
+DRAWING_AREA = {
+    'class_name': 'AfxFrameOrView42',  # This class name may vary
+    'control_id': 59648  # This ID may vary, verify with spy tool
+}
 
-    def select_ezcad_exe(self):
-        file_path = filedialog.askopenfilename(title="EZCAD2.exe yolunu seçin", filetypes=[("EZCAD2", "EZCAD2.exe")])
-        if file_path:
-            self.ezcad_exe_var.set(file_path)
-            self.save_config(file_path)
+# Common automation functions
 
-    def select_excel(self):
-        file_path = filedialog.askopenfilename(filetypes=[("Excel files", "*.xls;*.xlsx")])
-        if file_path:
-            self.excel_path_var.set(file_path)
-            try:
-                df = pd.read_excel(file_path, engine='xlrd' if file_path.endswith('.xls') else None)
-                preview_rows = []
-                for row_idx in range(1, 6):
-                    row_cells = []
-                    for col_idx in range(1, 11):
-                        try:
-                            val = str(df.iat[row_idx, col_idx])
-                        except:
-                            val = ""
-                        row_cells.append(val.ljust(8)[:8])
-                    preview_rows.append(" ".join(row_cells))
-                self.preview_box.delete("1.0", tk.END)
-                self.preview_box.insert(tk.END, "\n".join(preview_rows))
-            except Exception as e:
-                self.preview_box.delete("1.0", tk.END)
-                self.preview_box.insert(tk.END, f"Excel okunamadı: {e}")
+def get_red_button_spec():
+    """
+    Get the spec to identify the Red button in EZCAD2 toolbar
+    
+    Returns:
+        dict: Button specification for PyWinAuto
+    """
+    return TOOLBAR_BUTTONS['red']
 
-    def select_ezd(self):
-        file_path = filedialog.askopenfilename(filetypes=[("EZD files", "*.ezd")])
-        if not file_path:
-            return
-        self.ezd_path_var.set(file_path)
+def get_mark_button_spec():
+    """
+    Get the spec to identify the Mark button in EZCAD2 toolbar
+    
+    Returns:
+        dict: Button specification for PyWinAuto
+    """
+    return TOOLBAR_BUTTONS['mark']
 
-    def run_ezcad(self):
-        # self.root.withdraw()  # Arayüz gizleme kaldırıldı
-        for proc in psutil.process_iter(['pid', 'name']):
-            if 'EZCAD2.exe' in proc.info['name']:
-                messagebox.showerror("Uyarı", "Lütfen önce açık olan EZCAD2 uygulamasını kapatın.")
-                return
+def get_main_window_spec():
+    """
+    Get the spec to identify the main EZCAD2 window
+    
+    Returns:
+        dict: Window specification for PyWinAuto
+    """
+    return EZCAD_MAIN_WINDOW
 
-        exe_path = self.ezcad_exe_var.get()
-        file_path = self.ezd_path_var.get()
-        if not exe_path or not os.path.isfile(exe_path):
-            messagebox.showerror("Hata", "Lütfen önce EZCAD2.exe yolunu girin.")
-            return
+def get_open_file_dialog_spec():
+    """
+    Get the spec to identify the Open File dialog
+    
+    Returns:
+        dict: Dialog specification for PyWinAuto
+    """
+    return DIALOGS['open_file']
 
-        if not file_path:
-            messagebox.showerror("Hata", ".ezd dosyası seçilmedi.")
-            return
-
-        try:
-            os.spawnv(os.P_NOWAIT, exe_path, [exe_path, file_path])
-            for _ in range(15):
-                try:
-                    app = Application(backend="win32").connect(title_re=".*License.*|.*Agreement.*|.*Terms.*")
-                    license_win = app.top_window()
-                    agree_button = license_win.child_window(title_re=".*agree.*|.*Kabul.*|.*Annehmen.*|.*同意.*", control_type="Button")
-                    if agree_button.exists():
-                        license_win.set_focus()
-                        agree_button.click()
-                        time.sleep(0.5)
-                        license_win.minimize()
-                        time.sleep(0.2)
-                        license_win.type_keys('{ENTER}', set_foreground=False)
-                        break
-                except:
-                    time.sleep(1)
-        except Exception as e:
-            messagebox.showerror("Başlatma Hatası", f"EZD dosyası başlatılamadı: {e}")
-            return
-
-        for _ in range(10):
-            try:
-                ezd_name = os.path.basename(file_path).replace(".", "\.")
-                app = Application().connect(title_re=f".*{ezd_name}.*")
-                self.ezcad_window = app.top_window()
-                self.ezcad_window.minimize()
-                break
-            except:
-                time.sleep(1)
-        else:
-            messagebox.showerror("Bağlantı Hatası", "EZCAD penceresi otomatik olarak algılanamadı.")
-            return
-
-        self.mark_button.config(state=tk.NORMAL)
-        # self.root.deiconify()  # Arayüz geri getirme kaldırıldı
-        self.red_button.config(state=tk.NORMAL)
-        self.red_button.config(state=tk.NORMAL)
-
-    def select_ezcad_window(self):
-        try:
-            file_path = self.ezd_path_var.get()
-            if not file_path:
-                raise Exception(".ezd dosyası seçilmedi.")
-            ezd_name = os.path.basename(file_path).replace(".", "\.")
-            app = Application().connect(title_re=f".*{ezd_name}.*")
-            self.ezcad_window = app.top_window()
-            messagebox.showinfo("Başarılı", ".ezd penceresi seçildi.")
-        except Exception as e:
-            messagebox.showerror("Hata", f"EZCAD penceresi bulunamadı: {e}")
-
-    def send_red(self):
-        try:
-            if hasattr(self, 'ezcad_window'):
-                self.ezcad_window.type_keys("{F1}")
-            else:
-                raise Exception("EZCAD penceresi tanımlı değil.")
-        except Exception as e:
-            messagebox.showerror("Hata", f"RED komutu gönderilemedi: {e}")
-
-    def send_mark(self):
-        try:
-            if hasattr(self, 'ezcad_window'):
-                self.ezcad_window.type_keys("{F2}")
-            else:
-                raise Exception("EZCAD penceresi tanımlı değil.")
-        except Exception as e:
-            messagebox.showerror("Hata", f"MARK komutu gönderilemedi: {e}")
-
-    def load_config(self):
-        config = configparser.ConfigParser()
-        if os.path.exists(self.config_file):
-            config.read(self.config_file)
-            self.ezcad_exe_path = config.get("Paths", "ezcad_exe", fallback="")
-        else:
-            self.ezcad_exe_path = ""
-
-    def save_config(self, path):
-        config = configparser.ConfigParser()
-        config["Paths"] = {"ezcad_exe": path}
-        with open(self.config_file, "w") as f:
-            config.write(f)
-
-if __name__ == "__main__":
-    root = tk.Tk()
-    app = EZCADApp(root)
-    root.mainloop()
+def get_keyboard_shortcut(action):
+    """
+    Get the keyboard shortcut for a specific action
+    
+    Args:
+        action (str): Action name as defined in KEYBOARD_SHORTCUTS
+        
+    Returns:
+        str: Keyboard shortcut string for PyWinAuto
+    """
+    return KEYBOARD_SHORTCUTS.get(action, '')
