@@ -97,24 +97,33 @@ class EZCADController:
                     return False
 
                 window = instance['window']
-                if not window.is_visible():
-                    window.restore()
-                    time.sleep(0.5)
-                
-                window.set_focus()
-                time.sleep(0.5)
-                
-                command = command.lower()
-                if command == 'red':
-                    window.type_keys("{F1}")
-                    self.logger.info(f"Sent RED command to window {window_id}")
-                    time.sleep(1.5)  # Increased delay
-                    return True
-                elif command == 'mark':
-                    window.type_keys("{F2}")
-                    self.logger.info(f"Sent MARK command to window {window_id}")
-                    time.sleep(1.5)  # Increased delay
-                    return True
+                try:
+                    if not window.is_visible():
+                        window.restore()
+                        time.sleep(1.0)
+                    
+                    # Make sure window is active
+                    window.set_focus()
+                    time.sleep(1.0)
+                    
+                    # Check if window is ready
+                    if not window.is_active():
+                        raise Exception("EZCAD window is not active")
+                        
+                    command = command.lower()
+                    if command == 'red':
+                        window.type_keys("{F1}")
+                        self.logger.info(f"Sent RED command to window {window_id}")
+                        time.sleep(2.0)  # Increased delay for stability
+                        return True
+                    elif command == 'mark':
+                        window.type_keys("{F2}")
+                        self.logger.info(f"Sent MARK command to window {window_id}")
+                        time.sleep(2.0)  # Increased delay for stability
+                        return True
+                except Exception as e:
+                    self.logger.error(f"Window control error: {str(e)}")
+                    return False
                 else:
                     self.logger.warning(f"Unknown command: {command}")
                     return False
