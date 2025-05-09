@@ -142,7 +142,7 @@ class EZCADAutomationApp:
         self.mark_button = ttk.Button(control_frame, text="Mark", command=lambda: self._send_command('mark'), state=tk.DISABLED)
         self.mark_button.pack(side=tk.LEFT, padx=5)
 
-        self.process_button = ttk.Button(control_frame, text="Process Excel", command=self._process_excel)
+        self.process_button = ttk.Button(control_frame, text="Process Excel", command=self.process_excel)
         self.process_button.pack(side=tk.LEFT, padx=5)
 
         self.select_window_button = ttk.Button(control_frame, text="Select EZCAD Window", command=self._select_ezcad_window)
