@@ -61,19 +61,40 @@ class EZCADController:
                     if agree_window.is_visible():
                         # Try multiple ways to close the dialog
                         try:
+                            agree_window.set_focus()
+                            time.sleep(0.2)
                             agree_window.type_keys("{ENTER}")
-                        except:
+                            time.sleep(0.5)
+                        except Exception:
                             try:
-                                agree_window.type_keys(" ")  # Space key
-                            except:
+                                agree_window.set_focus()
+                                time.sleep(0.2)
+                                agree_window.type_keys(" ")
+                                time.sleep(0.5)
+                            except Exception:
                                 try:
                                     agree_button = agree_window.child_window(title="I Agree")
                                     agree_button.click()
-                                except:
+                                    time.sleep(0.5)
+                                except Exception:
                                     pass
+                        break
+                except Exception:
+                    continue
+
+            # EZCAD başlatıldıktan hemen sonra:
+            for _ in range(10):  # 10 saniye boyunca dene
+                time.sleep(1)
+                try:
+                    agree_app = Application().connect(title_re=".*I Agree.*", timeout=1)
+                    agree_window = agree_app.top_window()
+                    if agree_window.is_visible():
+                        agree_window.set_focus()
+                        time.sleep(0.2)
+                        agree_window.type_keys("{ENTER}")
                         time.sleep(0.5)
                         break
-                except:
+                except Exception:
                     continue
 
             # Then look for the main EZCAD window
@@ -171,8 +192,9 @@ class EZCADController:
 
                     elif command == 'mark':
                         window.set_focus()
-                        time.sleep(0.5)
+                        time.sleep(1)
                         window.type_keys("{F2}")
+                        time.sleep(2) 
                         self.logger.info(f"Sent MARK command to window {window_id}")
                         time.sleep(1.0)  # Wait for command to take effect
                         return True

@@ -3,7 +3,7 @@ import time
 
 class Processor:
     """Process files with EZCAD"""
-
+    
     def __init__(self, excel_handler, ezcad_controller, config, logger=None):
         self.excel_handler = excel_handler
         self.ezcad_controller = ezcad_controller
@@ -44,18 +44,17 @@ class Processor:
             raise Exception("Failed to start EZCAD")
 
         try:
-            # Example processing sequence
-            time.sleep(1)  # Wait for EZCAD to load
+            time.sleep(1)
             self.ezcad_controller.send_command(window_id, "red")
             time.sleep(0.5)
             self.ezcad_controller.send_command(window_id, "mark")
-
+            time.sleep(1)
+            # Şablonu tekrar yükle (isteğe bağlı)
+            # self.ezcad_controller.send_command(window_id, "load_template")  # Eğer böyle bir komutunuz varsa
             result = {
                 "window_id": window_id,
                 "status": "completed"
             }
-
             return result
-
         finally:
             self.ezcad_controller.close_ezcad(window_id)
