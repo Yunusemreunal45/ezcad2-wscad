@@ -429,3 +429,39 @@ Traceback (most recent call last):
     self.process_button = ttk.Button(control_frame, text="Process Excel", command=self._process_excel)
                                                                                   ^^^^^^^^^^^^^^^^^^^
 AttributeError: 'EZCADAutomationApp' object has no attribute '_process_excel'
+2025-05-09 17:39:47,407 - INFO - Platform: Linux 6.2.16
+2025-05-09 17:39:47,407 - WARNING - Running in non-Windows environment. EZCAD automation will run in simulation mode.
+2025-05-09 17:39:47,407 - WARNING - Running in non-Windows environment. EZCAD automation will run in simulation mode.
+2025-05-09 17:39:47,429 - CRITICAL - Unhandled exception
+Traceback (most recent call last):
+  File "/home/runner/workspace/main.py", line 84, in <module>
+    main()
+  File "/home/runner/workspace/main.py", line 75, in main
+    app = EZCADAutomationApp(root)
+          ^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/runner/workspace/ezcad_automation_compat.py", line 57, in __init__
+    self._create_ui()
+  File "/home/runner/workspace/ezcad_automation_compat.py", line 75, in _create_ui
+    self._create_main_tab(main_tab)
+  File "/home/runner/workspace/ezcad_automation_compat.py", line 158, in _create_main_tab
+    self.process_button = ttk.Button(control_frame, text="Process Excel", command=self._process_excel)
+                                                                                  ^^^^^^^^^^^^^^^^^^^
+AttributeError: 'EZCADAutomationApp' object has no attribute '_process_excel'
+2025-05-09 17:39:48,229 - INFO - Platform: Linux 6.2.16
+2025-05-09 17:39:48,229 - WARNING - Running in non-Windows environment. EZCAD automation will run in simulation mode.
+2025-05-09 17:39:48,230 - WARNING - Running in non-Windows environment. EZCAD automation will run in simulation mode.
+2025-05-09 17:39:48,253 - CRITICAL - Unhandled exception
+Traceback (most recent call last):
+  File "/home/runner/workspace/main.py", line 84, in <module>
+    main()
+  File "/home/runner/workspace/main.py", line 75, in main
+    app = EZCADAutomationApp(root)
+          ^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/runner/workspace/ezcad_automation_compat.py", line 57, in __init__
+    self._create_ui()
+  File "/home/runner/workspace/ezcad_automation_compat.py", line 75, in _create_ui
+    self._create_main_tab(main_tab)
+  File "/home/runner/workspace/ezcad_automation_compat.py", line 158, in _create_main_tab
+    self.process_button = ttk.Button(control_frame, text="Process Excel", command=self._process_excel)
+                                                                                  ^^^^^^^^^^^^^^^^^^^
+AttributeError: 'EZCADAutomationApp' object has no attribute '_process_excel'
