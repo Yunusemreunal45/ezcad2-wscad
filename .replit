@@ -1,4 +1,5 @@
 modules = ["python-3.11"]
+run = "python main.py"
 
 [nix]
 channel = "stable-24_05"
@@ -38,4 +39,4 @@ task = "shell.exec"
 args = "python main.py"
 
 [deployment]
-run = ["sh", "-c", "pip install pandas pywinauto watchdog psutil && python main.py"]
+run = ["sh", "-c", "python main.py"]
