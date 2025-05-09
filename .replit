@@ -6,7 +6,7 @@ channel = "stable-24_05"
 packages = ["glibcLocales"]
 
 [workflows]
-runButton = "Project"
+runButton = "Run EZCAD"
 
 [[workflows.workflow]]
 name = "Project"
@@ -33,6 +33,19 @@ waitForPort = 5000
 [[workflows.workflow]]
 name = "default"
 author = "agent"
+
+[[workflows.workflow.tasks]]
+task = "shell.exec"
+args = "python main.py"
+
+[[workflows.workflow]]
+name = "Run EZCAD"
+author = 41886909
+mode = "sequential"
+
+[[workflows.workflow.tasks]]
+task = "shell.exec"
+args = "pip install pandas pywinauto watchdog psutil"
 
 [[workflows.workflow.tasks]]
 task = "shell.exec"

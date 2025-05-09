@@ -206,12 +206,10 @@ class EZCADController:
                     window.type_keys("{F2}")
                     self.logger.info(f"Sent MARK command to window {window_id}")
                 time.sleep(0.5)  # Komut gönderdikten sonra kısa bir gecikme
-                # Add more commands as needed
+                return True
                 else:
                     self.logger.warning(f"Unknown command: {command}")
                     return False
-                
-                return True
                 
         except Exception as e:
             self.logger.error(f"Error sending command {command} to window {window_id}: {str(e)}")
