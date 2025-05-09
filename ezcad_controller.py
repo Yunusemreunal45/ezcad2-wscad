@@ -108,17 +108,40 @@ class EZCADController:
                     return False
 
                 window = instance['window']
+                app = instance['app']
+
+                # Verify window is still valid
+                try:
+                    window.wait('visible', timeout=5)
+                except Exception as e:
+                    self.logger.error(f"Window validation failed: {str(e)}")
+                    return False
+
+                # Check if EZCAD2 is still running
+                if not app.is_process_running():
+                    self.logger.error("EZCAD2 process is not running")
+                    return False
+
+                # Ensure window is visible and active
                 try:
                     if not window.is_visible():
                         window.restore()
                         time.sleep(1.0)
 
-                    window.set_focus()
-                    time.sleep(1.0)
-
-                    if not window.is_active():
-                        self.logger.error("EZCAD window is not active after set_focus()")
-                        raise Exception("EZCAD window is not active")
+                    # Try multiple times to set focus
+                    max_attempts = 3
+                    for attempt in range(max_attempts):
+                        window.set_focus()
+                        time.sleep(0.5)
+                        
+                        if window.is_active():
+                            break
+                            
+                        if attempt == max_attempts - 1:
+                            self.logger.error("Failed to activate EZCAD window after multiple attempts")
+                            return False
+                            
+                        time.sleep(1.0)
 
                     command = command.lower()
                     if command == 'red':
@@ -126,22 +149,28 @@ class EZCADController:
                         time.sleep(0.5)
                         window.type_keys("{F1}")
                         self.logger.info(f"Sent RED command to window {window_id}")
-                        time.sleep(2.5)
+                        time.sleep(1.0)  # Wait for command to take effect
                         return True
+                        
                     elif command == 'mark':
                         window.set_focus()
                         time.sleep(0.5)
-                        self.logger.info("Sending {F2} to EZCAD window")
                         window.type_keys("{F2}")
                         self.logger.info(f"Sent MARK command to window {window_id}")
-                        time.sleep(2.5)
+                        time.sleep(1.0)  # Wait for command to take effect
                         return True
+                        
                     else:
                         self.logger.warning(f"Unknown command: {command}")
                         return False
+
                 except Exception as e:
                     self.logger.error(f"Window control error: {str(e)}")
                     return False
+
+        except Exception as e:
+            self.logger.error(f"Error sending command {command} to window {window_id}: {str(e)}")
+            return False
                 else:
                     self.logger.warning(f"Unknown command: {command}")
                     return False
