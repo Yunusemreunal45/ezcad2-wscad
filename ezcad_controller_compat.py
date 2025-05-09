@@ -81,6 +81,9 @@ class EZCADController:
         Returns:
             window_id: ID for the EZCAD window or None if failed
         """
+        exe_path = self.config_manager.get('Paths', 'ezcad_exe')
+        self.logger.info(f"EZCAD exe_path: {exe_path}")
+        self.logger.info(f"EZD file: {ezd_file}")
         # In non-Windows environment, simulate the behavior
         if not PlatformUtils.is_windows():
             window_id = f"sim_ezcad_{int(time.time() * 1000)}"
@@ -263,10 +266,12 @@ class EZCADController:
                 window = instance['window']
                 
                 if command.lower() == 'red':
-                    window.type_keys("{F1}")
+                    window.set_focus()  # Pencereyi odakla
+                    window.type_keys("{F1}", set_foreground=True)
                     self.logger.info(f"Sent RED command to window {window_id}")
                 elif command.lower() == 'mark':
-                    window.type_keys("{F2}")
+                    window.set_focus()  # Pencereyi odakla
+                    window.type_keys("{F2}", set_foreground=True)
                     self.logger.info(f"Sent MARK command to window {window_id}")
                 # Add more commands as needed
                 else:

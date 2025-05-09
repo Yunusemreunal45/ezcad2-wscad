@@ -47,7 +47,7 @@ class Processor:
             if batch_process:
                 # Process in batches
                 batch_size = self.config_manager.getint('Settings', 'batch_size', fallback=10)
-                batches = self.excel_handler.get_batch_data(batch_size)
+                batches = self.excel_handler.get_batch_data(df, batch_size)
                 
                 results = {
                     'total_rows': len(df),

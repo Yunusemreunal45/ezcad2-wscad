@@ -501,21 +501,35 @@ class EZCADAutomationApp:
             self.logger.error(f"Error in EZCAD thread: {str(e)}")
             self.root.after(0, lambda: messagebox.showerror("EZCAD Error", f"Error: {str(e)}"))
             self.status_var.set("Error")
+
+
+def _send_command(self, command):
+    """Send a command to the active EZCAD window"""
+    if not hasattr(self, 'current_window_id'):
+        messagebox.showerror("Error", "No active EZCAD window")
+        return
     
-    def _send_command(self, command):
-        """Send a command to the active EZCAD window"""
-        if hasattr(self, 'current_window_id'):
-            success = self.ezcad_controller.send_command(self.current_window_id, command)
-            if success:
-                self.logger.info(f"Sent {command} command")
-                self.status_var.set(f"Sent {command} command")
-            else:
-                self.logger.error(f"Failed to send {command} command")
-                messagebox.showerror("Command Error", f"Failed to send {command} command.")
-        else:
-            self.logger.warning("No active EZCAD window")
-            messagebox.showwarning("EZCAD", "No active EZCAD window. Please start EZCAD first.")
+    # Show status
+    self.status_var.set(f"Sending {command} command...")
+    self.root.update_idletasks()
     
+    # Send command through the controller
+    success = self.ezcad_controller.send_command(self.current_window_id, command)
+    
+    if success:
+        self.logger.info(f"Sent {command.upper()} command to EZCAD")
+        self.status_var.set(f"{command.upper()} command sent successfully")
+        
+        # Automatically handle any post-command tasks
+        if command.lower() == 'mark':
+            # Update job status or counters if needed
+            self.logger.info("Mark operation completed")
+            self.status_var.set("Mark operation completed")
+    else:
+        self.logger.error(f"Failed to send {command.upper()} command")
+        messagebox.showerror("Error", f"Failed to send {command.upper()} command")
+        self.status_var.set("Command failed")
+
     def _select_ezcad_window(self):
         """Manually select EZCAD window"""
         messagebox.showinfo("Select Window", "Please ensure EZCAD is running, then click OK to select the window.")

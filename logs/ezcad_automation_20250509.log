@@ -1,0 +1,413 @@
+2025-05-09 15:33:03,012 - INFO - Platform: Linux 6.2.16
+2025-05-09 15:33:03,012 - WARNING - Running in non-Windows environment. EZCAD automation will run in simulation mode.
+2025-05-09 15:33:03,013 - WARNING - Running in non-Windows environment. EZCAD automation will run in simulation mode.
+2025-05-09 15:33:12,291 - INFO - Platform: Linux 6.2.16
+2025-05-09 15:33:12,291 - WARNING - Running in non-Windows environment. EZCAD automation will run in simulation mode.
+2025-05-09 15:33:12,291 - WARNING - Running in non-Windows environment. EZCAD automation will run in simulation mode.
+2025-05-09 15:33:32,094 - INFO - Platform: Linux 6.2.16
+2025-05-09 15:33:32,094 - WARNING - Running in non-Windows environment. EZCAD automation will run in simulation mode.
+2025-05-09 15:33:32,094 - WARNING - Running in non-Windows environment. EZCAD automation will run in simulation mode.
+2025-05-09 15:36:47,694 - INFO - Platform: Linux 6.2.16
+2025-05-09 15:36:47,694 - WARNING - Running in non-Windows environment. EZCAD automation will run in simulation mode.
+2025-05-09 15:36:47,695 - WARNING - Running in non-Windows environment. EZCAD automation will run in simulation mode.
+2025-05-09 15:36:57,242 - INFO - Platform: Linux 6.2.16
+2025-05-09 15:36:57,242 - WARNING - Running in non-Windows environment. EZCAD automation will run in simulation mode.
+2025-05-09 15:36:57,242 - WARNING - Running in non-Windows environment. EZCAD automation will run in simulation mode.
+2025-05-09 15:37:17,598 - INFO - Platform: Linux 6.2.16
+2025-05-09 15:37:17,599 - WARNING - Running in non-Windows environment. EZCAD automation will run in simulation mode.
+2025-05-09 15:37:17,600 - WARNING - Running in non-Windows environment. EZCAD automation will run in simulation mode.
+2025-05-09 19:20:01,299 - INFO - Platform: Windows 10
+2025-05-09 19:20:14,620 - INFO - Selected EZCAD executable: C:/Users/yunus/Desktop/Ezcad2.14.11(20230924)/EzCad2.exe
+2025-05-09 19:20:25,825 - INFO - Loading Excel file: C:/Users/yunus/Desktop/Ezcad2.14.11(20230924)/names.xls
+2025-05-09 19:20:25,848 - INFO - Excel file loaded successfully: C:/Users/yunus/Desktop/Ezcad2.14.11(20230924)/names.xls
+2025-05-09 19:20:25,848 - DEBUG - Excel dimensions: 5 rows, 11 columns
+2025-05-09 19:20:34,403 - INFO - Selected EZD file: C:/Users/yunus/Desktop/DGAtestmakina2dekafiks.ezd
+2025-05-09 19:20:40,693 - INFO - Starting EZCAD2: C:/Users/yunus/Desktop/Ezcad2.14.11(20230924)/EzCad2.exe C:/Users/yunus/Desktop/DGAtestmakina2dekafiks.ezd
+2025-05-09 19:20:42,469 - DEBUG - Waiting for EZCAD window: {'title_re': '.*DGAtestmakina2dekafiks\\.ezd.*', 'backend': 'win32', 'visible_only': False}
+2025-05-09 19:20:43,495 - DEBUG - Waiting for EZCAD window: {'title_re': '.*License.*|.*Agreement.*|.*Terms.*', 'backend': 'win32', 'visible_only': False}
+2025-05-09 19:20:44,524 - DEBUG - Waiting for EZCAD window: {'title_re': '.*License.*|.*Agreement.*|.*Terms.*', 'backend': 'win32', 'visible_only': False}
+2025-05-09 19:20:45,554 - DEBUG - Waiting for EZCAD window: {'title_re': '.*License.*|.*Agreement.*|.*Terms.*', 'backend': 'win32', 'visible_only': False}
+2025-05-09 19:20:46,584 - DEBUG - Waiting for EZCAD window: {'title_re': '.*License.*|.*Agreement.*|.*Terms.*', 'backend': 'win32', 'visible_only': False}
+2025-05-09 19:20:47,618 - DEBUG - Waiting for EZCAD window: {'title_re': '.*License.*|.*Agreement.*|.*Terms.*', 'backend': 'win32', 'visible_only': False}
+2025-05-09 19:20:48,651 - DEBUG - Waiting for EZCAD window: {'title_re': '.*License.*|.*Agreement.*|.*Terms.*', 'backend': 'win32', 'visible_only': False}
+2025-05-09 19:20:49,684 - DEBUG - Waiting for EZCAD window: {'title_re': '.*License.*|.*Agreement.*|.*Terms.*', 'backend': 'win32', 'visible_only': False}
+2025-05-09 19:20:51,110 - DEBUG - Waiting for EZCAD window: {'title_re': '.*License.*|.*Agreement.*|.*Terms.*', 'backend': 'win32', 'visible_only': False}
+2025-05-09 19:20:53,554 - DEBUG - Waiting for EZCAD window: {'title_re': '.*License.*|.*Agreement.*|.*Terms.*', 'backend': 'win32', 'visible_only': False}
+2025-05-09 19:20:54,585 - DEBUG - Waiting for EZCAD window: {'title_re': '.*License.*|.*Agreement.*|.*Terms.*', 'backend': 'win32', 'visible_only': False}
+2025-05-09 19:20:55,620 - DEBUG - Waiting for EZCAD window: {'title_re': '.*License.*|.*Agreement.*|.*Terms.*', 'backend': 'win32', 'visible_only': False}
+2025-05-09 19:20:56,653 - DEBUG - Waiting for EZCAD window: {'title_re': '.*License.*|.*Agreement.*|.*Terms.*', 'backend': 'win32', 'visible_only': False}
+2025-05-09 19:20:57,696 - DEBUG - Waiting for EZCAD window: {'title_re': '.*License.*|.*Agreement.*|.*Terms.*', 'backend': 'win32', 'visible_only': False}
+2025-05-09 19:20:58,742 - DEBUG - Waiting for EZCAD window: {'title_re': '.*License.*|.*Agreement.*|.*Terms.*', 'backend': 'win32', 'visible_only': False}
+2025-05-09 19:20:58,742 - ERROR - Failed to connect to EZCAD window after launch
+2025-05-09 19:20:58,743 - ERROR - Failed to start EZCAD
+2025-05-09 19:22:25,537 - INFO - Starting EZCAD2: C:/Users/yunus/Desktop/Ezcad2.14.11(20230924)/EzCad2.exe C:/Users/yunus/Desktop/DGAtestmakina2dekafiks.ezd
+2025-05-09 19:22:26,590 - DEBUG - Waiting for EZCAD window: {'title_re': '.*License.*|.*Agreement.*|.*Terms.*', 'backend': 'win32', 'visible_only': False}
+2025-05-09 19:22:27,624 - DEBUG - Waiting for EZCAD window: {'title_re': '.*License.*|.*Agreement.*|.*Terms.*', 'backend': 'win32', 'visible_only': False}
+2025-05-09 19:22:28,668 - DEBUG - Waiting for EZCAD window: {'title_re': '.*License.*|.*Agreement.*|.*Terms.*', 'backend': 'win32', 'visible_only': False}
+2025-05-09 19:22:29,738 - DEBUG - Waiting for EZCAD window: {'title_re': '.*License.*|.*Agreement.*|.*Terms.*', 'backend': 'win32', 'visible_only': False}
+2025-05-09 19:22:30,775 - DEBUG - Waiting for EZCAD window: {'title_re': '.*License.*|.*Agreement.*|.*Terms.*', 'backend': 'win32', 'visible_only': False}
+2025-05-09 19:22:31,817 - DEBUG - Waiting for EZCAD window: {'title_re': '.*License.*|.*Agreement.*|.*Terms.*', 'backend': 'win32', 'visible_only': False}
+2025-05-09 19:22:32,856 - DEBUG - Waiting for EZCAD window: {'title_re': '.*License.*|.*Agreement.*|.*Terms.*', 'backend': 'win32', 'visible_only': False}
+2025-05-09 19:22:33,898 - DEBUG - Waiting for EZCAD window: {'title_re': '.*License.*|.*Agreement.*|.*Terms.*', 'backend': 'win32', 'visible_only': False}
+2025-05-09 19:22:34,922 - DEBUG - Waiting for EZCAD window: {'title_re': '.*License.*|.*Agreement.*|.*Terms.*', 'backend': 'win32', 'visible_only': False}
+2025-05-09 19:22:35,807 - INFO - Starting EZCAD2: C:/Users/yunus/Desktop/Ezcad2.14.11(20230924)/EzCad2.exe C:/Users/yunus/Desktop/DGAtestmakina2dekafiks.ezd
+2025-05-09 19:22:36,504 - DEBUG - Waiting for EZCAD window: {'title_re': '.*DGAtestmakina2dekafiks\\.ezd.*', 'backend': 'win32', 'visible_only': False}
+2025-05-09 19:22:37,386 - DEBUG - Waiting for EZCAD window: {'title_re': '.*DGAtestmakina2dekafiks\\.ezd.*', 'backend': 'win32', 'visible_only': False}
+2025-05-09 19:22:37,541 - DEBUG - Waiting for EZCAD window: {'title_re': '.*License.*|.*Agreement.*|.*Terms.*', 'backend': 'win32', 'visible_only': False}
+2025-05-09 19:22:38,414 - DEBUG - Waiting for EZCAD window: {'title_re': '.*License.*|.*Agreement.*|.*Terms.*', 'backend': 'win32', 'visible_only': False}
+2025-05-09 19:22:38,568 - DEBUG - Waiting for EZCAD window: {'title_re': '.*License.*|.*Agreement.*|.*Terms.*', 'backend': 'win32', 'visible_only': False}
+2025-05-09 19:22:39,445 - DEBUG - Waiting for EZCAD window: {'title_re': '.*License.*|.*Agreement.*|.*Terms.*', 'backend': 'win32', 'visible_only': False}
+2025-05-09 19:22:39,624 - DEBUG - Waiting for EZCAD window: {'title_re': '.*License.*|.*Agreement.*|.*Terms.*', 'backend': 'win32', 'visible_only': False}
+2025-05-09 19:22:40,476 - DEBUG - Waiting for EZCAD window: {'title_re': '.*License.*|.*Agreement.*|.*Terms.*', 'backend': 'win32', 'visible_only': False}
+2025-05-09 19:22:40,662 - DEBUG - Waiting for EZCAD window: {'title_re': '.*License.*|.*Agreement.*|.*Terms.*', 'backend': 'win32', 'visible_only': False}
+2025-05-09 19:22:41,502 - DEBUG - Waiting for EZCAD window: {'title_re': '.*License.*|.*Agreement.*|.*Terms.*', 'backend': 'win32', 'visible_only': False}
+2025-05-09 19:22:41,691 - DEBUG - Waiting for EZCAD window: {'title_re': '.*License.*|.*Agreement.*|.*Terms.*', 'backend': 'win32', 'visible_only': False}
+2025-05-09 19:22:41,691 - ERROR - Failed to connect to EZCAD window after launch
+2025-05-09 19:22:41,692 - ERROR - Failed to start EZCAD
+2025-05-09 19:22:42,536 - DEBUG - Waiting for EZCAD window: {'title_re': '.*License.*|.*Agreement.*|.*Terms.*', 'backend': 'win32', 'visible_only': False}
+2025-05-09 19:22:43,557 - DEBUG - Waiting for EZCAD window: {'title_re': '.*License.*|.*Agreement.*|.*Terms.*', 'backend': 'win32', 'visible_only': False}
+2025-05-09 19:22:44,590 - DEBUG - Waiting for EZCAD window: {'title_re': '.*License.*|.*Agreement.*|.*Terms.*', 'backend': 'win32', 'visible_only': False}
+2025-05-09 19:22:45,646 - DEBUG - Waiting for EZCAD window: {'title_re': '.*License.*|.*Agreement.*|.*Terms.*', 'backend': 'win32', 'visible_only': False}
+2025-05-09 19:22:47,148 - DEBUG - Waiting for EZCAD window: {'title_re': '.*License.*|.*Agreement.*|.*Terms.*', 'backend': 'win32', 'visible_only': False}
+2025-05-09 19:22:48,200 - DEBUG - Waiting for EZCAD window: {'title_re': '.*License.*|.*Agreement.*|.*Terms.*', 'backend': 'win32', 'visible_only': False}
+2025-05-09 19:22:49,228 - DEBUG - Waiting for EZCAD window: {'title_re': '.*License.*|.*Agreement.*|.*Terms.*', 'backend': 'win32', 'visible_only': False}
+2025-05-09 19:22:50,255 - DEBUG - Waiting for EZCAD window: {'title_re': '.*License.*|.*Agreement.*|.*Terms.*', 'backend': 'win32', 'visible_only': False}
+2025-05-09 19:22:51,284 - DEBUG - Waiting for EZCAD window: {'title_re': '.*License.*|.*Agreement.*|.*Terms.*', 'backend': 'win32', 'visible_only': False}
+2025-05-09 19:22:52,318 - DEBUG - Waiting for EZCAD window: {'title_re': '.*License.*|.*Agreement.*|.*Terms.*', 'backend': 'win32', 'visible_only': False}
+2025-05-09 19:22:52,319 - ERROR - Failed to connect to EZCAD window after launch
+2025-05-09 19:22:52,319 - ERROR - Failed to start EZCAD
+2025-05-09 19:25:29,974 - INFO - Processing Excel file: C:/Users/yunus/Desktop/Ezcad2.14.11(20230924)/names.xls
+2025-05-09 19:25:29,975 - INFO - Processing Excel file: C:/Users/yunus/Desktop/Ezcad2.14.11(20230924)/names.xls
+2025-05-09 19:25:29,976 - INFO - Loading Excel file: C:/Users/yunus/Desktop/Ezcad2.14.11(20230924)/names.xls
+2025-05-09 19:25:29,980 - INFO - Excel file loaded successfully: C:/Users/yunus/Desktop/Ezcad2.14.11(20230924)/names.xls
+2025-05-09 19:25:29,981 - DEBUG - Excel dimensions: 5 rows, 11 columns
+2025-05-09 19:25:30,662 - INFO - Starting EZCAD2: C:/Users/yunus/Desktop/Ezcad2.14.11(20230924)/EzCad2.exe C:/Users/yunus/Desktop/DGAtestmakina2dekafiks.ezd
+2025-05-09 19:25:32,232 - DEBUG - Waiting for EZCAD window: {'title_re': '.*DGAtestmakina2dekafiks\\.ezd.*', 'backend': 'win32', 'visible_only': False}
+2025-05-09 19:25:33,268 - DEBUG - Waiting for EZCAD window: {'title_re': '.*License.*|.*Agreement.*|.*Terms.*', 'backend': 'win32', 'visible_only': False}
+2025-05-09 19:25:34,292 - DEBUG - Waiting for EZCAD window: {'title_re': '.*License.*|.*Agreement.*|.*Terms.*', 'backend': 'win32', 'visible_only': False}
+2025-05-09 19:25:35,323 - DEBUG - Waiting for EZCAD window: {'title_re': '.*License.*|.*Agreement.*|.*Terms.*', 'backend': 'win32', 'visible_only': False}
+2025-05-09 19:25:36,352 - DEBUG - Waiting for EZCAD window: {'title_re': '.*License.*|.*Agreement.*|.*Terms.*', 'backend': 'win32', 'visible_only': False}
+2025-05-09 19:25:37,379 - DEBUG - Waiting for EZCAD window: {'title_re': '.*License.*|.*Agreement.*|.*Terms.*', 'backend': 'win32', 'visible_only': False}
+2025-05-09 19:25:38,406 - DEBUG - Waiting for EZCAD window: {'title_re': '.*License.*|.*Agreement.*|.*Terms.*', 'backend': 'win32', 'visible_only': False}
+2025-05-09 19:25:39,441 - DEBUG - Waiting for EZCAD window: {'title_re': '.*License.*|.*Agreement.*|.*Terms.*', 'backend': 'win32', 'visible_only': False}
+2025-05-09 19:25:41,758 - DEBUG - Waiting for EZCAD window: {'title_re': '.*License.*|.*Agreement.*|.*Terms.*', 'backend': 'win32', 'visible_only': False}
+2025-05-09 19:25:42,805 - DEBUG - Waiting for EZCAD window: {'title_re': '.*License.*|.*Agreement.*|.*Terms.*', 'backend': 'win32', 'visible_only': False}
+2025-05-09 19:25:43,854 - DEBUG - Waiting for EZCAD window: {'title_re': '.*License.*|.*Agreement.*|.*Terms.*', 'backend': 'win32', 'visible_only': False}
+2025-05-09 19:25:44,879 - DEBUG - Waiting for EZCAD window: {'title_re': '.*License.*|.*Agreement.*|.*Terms.*', 'backend': 'win32', 'visible_only': False}
+2025-05-09 19:25:45,994 - DEBUG - Waiting for EZCAD window: {'title_re': '.*License.*|.*Agreement.*|.*Terms.*', 'backend': 'win32', 'visible_only': False}
+2025-05-09 19:25:47,552 - INFO - Starting EZCAD2: C:/Users/yunus/Desktop/Ezcad2.14.11(20230924)/EzCad2.exe C:/Users/yunus/Desktop/DGAtestmakina2dekafiks.ezd
+2025-05-09 19:25:47,581 - DEBUG - Waiting for EZCAD window: {'title_re': '.*License.*|.*Agreement.*|.*Terms.*', 'backend': 'win32', 'visible_only': False}
+2025-05-09 19:25:49,194 - DEBUG - Waiting for EZCAD window: {'title_re': '.*DGAtestmakina2dekafiks\\.ezd.*', 'backend': 'win32', 'visible_only': False}
+2025-05-09 19:25:49,205 - DEBUG - Waiting for EZCAD window: {'title_re': '.*DGAtestmakina2dekafiks\\.ezd.*', 'backend': 'win32', 'visible_only': False}
+2025-05-09 19:25:49,206 - ERROR - Failed to connect to EZCAD window after launch
+2025-05-09 19:25:49,206 - ERROR - Failed to start EZCAD
+2025-05-09 19:25:50,228 - DEBUG - Waiting for EZCAD window: {'title_re': '.*License.*|.*Agreement.*|.*Terms.*', 'backend': 'win32', 'visible_only': False}
+2025-05-09 19:25:51,263 - DEBUG - Waiting for EZCAD window: {'title_re': '.*License.*|.*Agreement.*|.*Terms.*', 'backend': 'win32', 'visible_only': False}
+2025-05-09 19:25:52,293 - DEBUG - Waiting for EZCAD window: {'title_re': '.*License.*|.*Agreement.*|.*Terms.*', 'backend': 'win32', 'visible_only': False}
+2025-05-09 19:25:53,323 - DEBUG - Waiting for EZCAD window: {'title_re': '.*License.*|.*Agreement.*|.*Terms.*', 'backend': 'win32', 'visible_only': False}
+2025-05-09 19:25:54,350 - DEBUG - Waiting for EZCAD window: {'title_re': '.*License.*|.*Agreement.*|.*Terms.*', 'backend': 'win32', 'visible_only': False}
+2025-05-09 19:25:55,379 - DEBUG - Waiting for EZCAD window: {'title_re': '.*License.*|.*Agreement.*|.*Terms.*', 'backend': 'win32', 'visible_only': False}
+2025-05-09 19:25:56,406 - DEBUG - Waiting for EZCAD window: {'title_re': '.*License.*|.*Agreement.*|.*Terms.*', 'backend': 'win32', 'visible_only': False}
+2025-05-09 19:25:57,435 - DEBUG - Waiting for EZCAD window: {'title_re': '.*License.*|.*Agreement.*|.*Terms.*', 'backend': 'win32', 'visible_only': False}
+2025-05-09 19:25:59,034 - DEBUG - Waiting for EZCAD window: {'title_re': '.*License.*|.*Agreement.*|.*Terms.*', 'backend': 'win32', 'visible_only': False}
+2025-05-09 19:26:00,607 - DEBUG - Waiting for EZCAD window: {'title_re': '.*License.*|.*Agreement.*|.*Terms.*', 'backend': 'win32', 'visible_only': False}
+2025-05-09 19:26:01,638 - DEBUG - Waiting for EZCAD window: {'title_re': '.*License.*|.*Agreement.*|.*Terms.*', 'backend': 'win32', 'visible_only': False}
+2025-05-09 19:26:02,676 - DEBUG - Waiting for EZCAD window: {'title_re': '.*License.*|.*Agreement.*|.*Terms.*', 'backend': 'win32', 'visible_only': False}
+2025-05-09 19:26:03,710 - DEBUG - Waiting for EZCAD window: {'title_re': '.*License.*|.*Agreement.*|.*Terms.*', 'backend': 'win32', 'visible_only': False}
+2025-05-09 19:26:04,759 - DEBUG - Waiting for EZCAD window: {'title_re': '.*License.*|.*Agreement.*|.*Terms.*', 'backend': 'win32', 'visible_only': False}
+2025-05-09 19:26:04,760 - ERROR - Failed to connect to EZCAD window after launch
+2025-05-09 19:26:04,760 - ERROR - Failed to start EZCAD
+2025-05-09 19:35:56,828 - INFO - Platform: Windows 10
+2025-05-09 19:36:10,075 - INFO - Loading Excel file: C:/Users/yunus/Desktop/Ezcad2.14.11(20230924)/names.xls
+2025-05-09 19:36:10,090 - INFO - Excel file loaded successfully: C:/Users/yunus/Desktop/Ezcad2.14.11(20230924)/names.xls
+2025-05-09 19:36:10,090 - DEBUG - Excel dimensions: 5 rows, 11 columns
+2025-05-09 19:36:30,605 - INFO - Selected EZD file: C:/Users/yunus/Desktop/DGAtestmakina2dekafiks.ezd
+2025-05-09 19:36:40,485 - INFO - Starting EZCAD2: C:/Users/yunus/Desktop/Ezcad2.14.11(20230924)/EzCad2.exe C:/Users/yunus/Desktop/DGAtestmakina2dekafiks.ezd
+2025-05-09 19:36:41,613 - DEBUG - Waiting for EZCAD window: {'title_re': '.*License.*|.*Agreement.*|.*Terms.*', 'backend': 'win32', 'visible_only': False}
+2025-05-09 19:36:42,649 - DEBUG - Waiting for EZCAD window: {'title_re': '.*License.*|.*Agreement.*|.*Terms.*', 'backend': 'win32', 'visible_only': False}
+2025-05-09 19:36:43,720 - DEBUG - Waiting for EZCAD window: {'title_re': '.*License.*|.*Agreement.*|.*Terms.*', 'backend': 'win32', 'visible_only': False}
+2025-05-09 19:36:44,809 - DEBUG - Waiting for EZCAD window: {'title_re': '.*License.*|.*Agreement.*|.*Terms.*', 'backend': 'win32', 'visible_only': False}
+2025-05-09 19:36:46,276 - INFO - Starting EZCAD2: C:/Users/yunus/Desktop/Ezcad2.14.11(20230924)/EzCad2.exe C:/Users/yunus/Desktop/DGAtestmakina2dekafiks.ezd
+2025-05-09 19:36:46,300 - DEBUG - Waiting for EZCAD window: {'title_re': '.*License.*|.*Agreement.*|.*Terms.*', 'backend': 'win32', 'visible_only': False}
+2025-05-09 19:36:47,843 - DEBUG - Waiting for EZCAD window: {'title_re': '.*DGAtestmakina2dekafiks\\.ezd.*', 'backend': 'win32', 'visible_only': False}
+2025-05-09 19:36:47,871 - DEBUG - Waiting for EZCAD window: {'title_re': '.*DGAtestmakina2dekafiks\\.ezd.*', 'backend': 'win32', 'visible_only': False}
+2025-05-09 19:36:48,868 - DEBUG - Waiting for EZCAD window: {'title_re': '.*License.*|.*Agreement.*|.*Terms.*', 'backend': 'win32', 'visible_only': False}
+2025-05-09 19:36:48,899 - DEBUG - Waiting for EZCAD window: {'title_re': '.*License.*|.*Agreement.*|.*Terms.*', 'backend': 'win32', 'visible_only': False}
+2025-05-09 19:36:49,903 - DEBUG - Waiting for EZCAD window: {'title_re': '.*License.*|.*Agreement.*|.*Terms.*', 'backend': 'win32', 'visible_only': False}
+2025-05-09 19:36:49,932 - DEBUG - Waiting for EZCAD window: {'title_re': '.*License.*|.*Agreement.*|.*Terms.*', 'backend': 'win32', 'visible_only': False}
+2025-05-09 19:36:50,937 - DEBUG - Waiting for EZCAD window: {'title_re': '.*License.*|.*Agreement.*|.*Terms.*', 'backend': 'win32', 'visible_only': False}
+2025-05-09 19:36:50,965 - DEBUG - Waiting for EZCAD window: {'title_re': '.*License.*|.*Agreement.*|.*Terms.*', 'backend': 'win32', 'visible_only': False}
+2025-05-09 19:36:51,989 - DEBUG - Waiting for EZCAD window: {'title_re': '.*License.*|.*Agreement.*|.*Terms.*', 'backend': 'win32', 'visible_only': False}
+2025-05-09 19:36:51,999 - DEBUG - Waiting for EZCAD window: {'title_re': '.*License.*|.*Agreement.*|.*Terms.*', 'backend': 'win32', 'visible_only': False}
+2025-05-09 19:36:53,041 - DEBUG - Waiting for EZCAD window: {'title_re': '.*License.*|.*Agreement.*|.*Terms.*', 'backend': 'win32', 'visible_only': False}
+2025-05-09 19:36:53,050 - DEBUG - Waiting for EZCAD window: {'title_re': '.*License.*|.*Agreement.*|.*Terms.*', 'backend': 'win32', 'visible_only': False}
+2025-05-09 19:36:54,099 - DEBUG - Waiting for EZCAD window: {'title_re': '.*License.*|.*Agreement.*|.*Terms.*', 'backend': 'win32', 'visible_only': False}
+2025-05-09 19:36:54,099 - DEBUG - Waiting for EZCAD window: {'title_re': '.*License.*|.*Agreement.*|.*Terms.*', 'backend': 'win32', 'visible_only': False}
+2025-05-09 19:36:55,153 - DEBUG - Waiting for EZCAD window: {'title_re': '.*License.*|.*Agreement.*|.*Terms.*', 'backend': 'win32', 'visible_only': False}
+2025-05-09 19:36:55,154 - DEBUG - Waiting for EZCAD window: {'title_re': '.*License.*|.*Agreement.*|.*Terms.*', 'backend': 'win32', 'visible_only': False}
+2025-05-09 19:36:57,118 - DEBUG - Waiting for EZCAD window: {'title_re': '.*License.*|.*Agreement.*|.*Terms.*', 'backend': 'win32', 'visible_only': False}
+2025-05-09 19:36:57,119 - DEBUG - Waiting for EZCAD window: {'title_re': '.*License.*|.*Agreement.*|.*Terms.*', 'backend': 'win32', 'visible_only': False}
+2025-05-09 19:36:58,637 - DEBUG - Waiting for EZCAD window: {'title_re': '.*License.*|.*Agreement.*|.*Terms.*', 'backend': 'win32', 'visible_only': False}
+2025-05-09 19:36:58,639 - DEBUG - Waiting for EZCAD window: {'title_re': '.*License.*|.*Agreement.*|.*Terms.*', 'backend': 'win32', 'visible_only': False}
+2025-05-09 19:36:58,639 - ERROR - Failed to connect to EZCAD window after launch
+2025-05-09 19:36:58,640 - ERROR - Failed to start EZCAD
+2025-05-09 19:36:59,670 - DEBUG - Waiting for EZCAD window: {'title_re': '.*License.*|.*Agreement.*|.*Terms.*', 'backend': 'win32', 'visible_only': False}
+2025-05-09 19:37:00,700 - DEBUG - Waiting for EZCAD window: {'title_re': '.*License.*|.*Agreement.*|.*Terms.*', 'backend': 'win32', 'visible_only': False}
+2025-05-09 19:37:01,731 - DEBUG - Waiting for EZCAD window: {'title_re': '.*License.*|.*Agreement.*|.*Terms.*', 'backend': 'win32', 'visible_only': False}
+2025-05-09 19:37:02,780 - DEBUG - Waiting for EZCAD window: {'title_re': '.*License.*|.*Agreement.*|.*Terms.*', 'backend': 'win32', 'visible_only': False}
+2025-05-09 19:37:03,822 - DEBUG - Waiting for EZCAD window: {'title_re': '.*License.*|.*Agreement.*|.*Terms.*', 'backend': 'win32', 'visible_only': False}
+2025-05-09 19:37:03,822 - ERROR - Failed to connect to EZCAD window after launch
+2025-05-09 19:37:03,822 - ERROR - Failed to start EZCAD
+2025-05-09 19:38:04,060 - INFO - Selected EZD file: C:/Users/yunus/Desktop/Ezcad2.14.11(20230924)/DGA test makina 1 dekafiks.EZD
+2025-05-09 19:38:05,843 - INFO - Starting EZCAD2: C:/Users/yunus/Desktop/Ezcad2.14.11(20230924)/EzCad2.exe C:/Users/yunus/Desktop/Ezcad2.14.11(20230924)/DGA test makina 1 dekafiks.EZD
+2025-05-09 19:38:06,895 - DEBUG - Waiting for EZCAD window: {'title_re': '.*License.*|.*Agreement.*|.*Terms.*', 'backend': 'win32', 'visible_only': False}
+2025-05-09 19:38:07,939 - DEBUG - Waiting for EZCAD window: {'title_re': '.*License.*|.*Agreement.*|.*Terms.*', 'backend': 'win32', 'visible_only': False}
+2025-05-09 19:38:08,997 - DEBUG - Waiting for EZCAD window: {'title_re': '.*License.*|.*Agreement.*|.*Terms.*', 'backend': 'win32', 'visible_only': False}
+2025-05-09 19:38:10,032 - DEBUG - Waiting for EZCAD window: {'title_re': '.*License.*|.*Agreement.*|.*Terms.*', 'backend': 'win32', 'visible_only': False}
+2025-05-09 19:38:11,557 - INFO - Starting EZCAD2: C:/Users/yunus/Desktop/Ezcad2.14.11(20230924)/EzCad2.exe C:/Users/yunus/Desktop/Ezcad2.14.11(20230924)/DGA test makina 1 dekafiks.EZD
+2025-05-09 19:38:11,581 - DEBUG - Waiting for EZCAD window: {'title_re': '.*License.*|.*Agreement.*|.*Terms.*', 'backend': 'win32', 'visible_only': False}
+2025-05-09 19:38:13,135 - DEBUG - Waiting for EZCAD window: {'title_re': '.*DGA test makina 1 dekafiks\\.EZD.*', 'backend': 'win32', 'visible_only': False}
+2025-05-09 19:38:13,154 - DEBUG - Waiting for EZCAD window: {'title_re': '.*DGA test makina 1 dekafiks\\.EZD.*', 'backend': 'win32', 'visible_only': False}
+2025-05-09 19:38:14,163 - DEBUG - Waiting for EZCAD window: {'title_re': '.*License.*|.*Agreement.*|.*Terms.*', 'backend': 'win32', 'visible_only': False}
+2025-05-09 19:38:14,191 - DEBUG - Waiting for EZCAD window: {'title_re': '.*License.*|.*Agreement.*|.*Terms.*', 'backend': 'win32', 'visible_only': False}
+2025-05-09 19:38:15,192 - DEBUG - Waiting for EZCAD window: {'title_re': '.*License.*|.*Agreement.*|.*Terms.*', 'backend': 'win32', 'visible_only': False}
+2025-05-09 19:38:15,222 - DEBUG - Waiting for EZCAD window: {'title_re': '.*License.*|.*Agreement.*|.*Terms.*', 'backend': 'win32', 'visible_only': False}
+2025-05-09 19:38:16,226 - DEBUG - Waiting for EZCAD window: {'title_re': '.*License.*|.*Agreement.*|.*Terms.*', 'backend': 'win32', 'visible_only': False}
+2025-05-09 19:38:16,259 - DEBUG - Waiting for EZCAD window: {'title_re': '.*License.*|.*Agreement.*|.*Terms.*', 'backend': 'win32', 'visible_only': False}
+2025-05-09 19:38:17,258 - DEBUG - Waiting for EZCAD window: {'title_re': '.*License.*|.*Agreement.*|.*Terms.*', 'backend': 'win32', 'visible_only': False}
+2025-05-09 19:38:17,289 - DEBUG - Waiting for EZCAD window: {'title_re': '.*License.*|.*Agreement.*|.*Terms.*', 'backend': 'win32', 'visible_only': False}
+2025-05-09 19:38:18,292 - DEBUG - Waiting for EZCAD window: {'title_re': '.*License.*|.*Agreement.*|.*Terms.*', 'backend': 'win32', 'visible_only': False}
+2025-05-09 19:38:18,318 - DEBUG - Waiting for EZCAD window: {'title_re': '.*License.*|.*Agreement.*|.*Terms.*', 'backend': 'win32', 'visible_only': False}
+2025-05-09 19:38:19,351 - DEBUG - Waiting for EZCAD window: {'title_re': '.*License.*|.*Agreement.*|.*Terms.*', 'backend': 'win32', 'visible_only': False}
+2025-05-09 19:38:19,360 - DEBUG - Waiting for EZCAD window: {'title_re': '.*License.*|.*Agreement.*|.*Terms.*', 'backend': 'win32', 'visible_only': False}
+2025-05-09 19:38:20,411 - DEBUG - Waiting for EZCAD window: {'title_re': '.*License.*|.*Agreement.*|.*Terms.*', 'backend': 'win32', 'visible_only': False}
+2025-05-09 19:38:20,412 - DEBUG - Waiting for EZCAD window: {'title_re': '.*License.*|.*Agreement.*|.*Terms.*', 'backend': 'win32', 'visible_only': False}
+2025-05-09 19:38:22,101 - DEBUG - Waiting for EZCAD window: {'title_re': '.*License.*|.*Agreement.*|.*Terms.*', 'backend': 'win32', 'visible_only': False}
+2025-05-09 19:38:22,101 - DEBUG - Waiting for EZCAD window: {'title_re': '.*License.*|.*Agreement.*|.*Terms.*', 'backend': 'win32', 'visible_only': False}
+2025-05-09 19:38:23,150 - DEBUG - Waiting for EZCAD window: {'title_re': '.*License.*|.*Agreement.*|.*Terms.*', 'backend': 'win32', 'visible_only': False}
+2025-05-09 19:38:23,150 - DEBUG - Waiting for EZCAD window: {'title_re': '.*License.*|.*Agreement.*|.*Terms.*', 'backend': 'win32', 'visible_only': False}
+2025-05-09 19:38:23,151 - ERROR - Failed to connect to EZCAD window after launch
+2025-05-09 19:38:23,151 - ERROR - Failed to start EZCAD
+2025-05-09 19:38:24,177 - DEBUG - Waiting for EZCAD window: {'title_re': '.*License.*|.*Agreement.*|.*Terms.*', 'backend': 'win32', 'visible_only': False}
+2025-05-09 19:38:25,203 - DEBUG - Waiting for EZCAD window: {'title_re': '.*License.*|.*Agreement.*|.*Terms.*', 'backend': 'win32', 'visible_only': False}
+2025-05-09 19:38:26,244 - DEBUG - Waiting for EZCAD window: {'title_re': '.*License.*|.*Agreement.*|.*Terms.*', 'backend': 'win32', 'visible_only': False}
+2025-05-09 19:38:27,289 - DEBUG - Waiting for EZCAD window: {'title_re': '.*License.*|.*Agreement.*|.*Terms.*', 'backend': 'win32', 'visible_only': False}
+2025-05-09 19:38:28,330 - DEBUG - Waiting for EZCAD window: {'title_re': '.*License.*|.*Agreement.*|.*Terms.*', 'backend': 'win32', 'visible_only': False}
+2025-05-09 19:38:28,331 - ERROR - Failed to connect to EZCAD window after launch
+2025-05-09 19:38:28,331 - ERROR - Failed to start EZCAD
+2025-05-09 19:38:52,511 - INFO - Selected EZD file: C:/Users/yunus/Desktop/DGA test makina 2 dekafiks.ezd
+2025-05-09 19:38:54,772 - INFO - Starting EZCAD2: C:/Users/yunus/Desktop/Ezcad2.14.11(20230924)/EzCad2.exe C:/Users/yunus/Desktop/DGA test makina 2 dekafiks.ezd
+2025-05-09 19:38:56,355 - DEBUG - Waiting for EZCAD window: {'title_re': '.*DGA test makina 2 dekafiks\\.ezd.*', 'backend': 'win32', 'visible_only': False}
+2025-05-09 19:38:57,386 - DEBUG - Waiting for EZCAD window: {'title_re': '.*License.*|.*Agreement.*|.*Terms.*', 'backend': 'win32', 'visible_only': False}
+2025-05-09 19:38:58,423 - DEBUG - Waiting for EZCAD window: {'title_re': '.*License.*|.*Agreement.*|.*Terms.*', 'backend': 'win32', 'visible_only': False}
+2025-05-09 19:38:59,451 - DEBUG - Waiting for EZCAD window: {'title_re': '.*License.*|.*Agreement.*|.*Terms.*', 'backend': 'win32', 'visible_only': False}
+2025-05-09 19:39:00,477 - DEBUG - Waiting for EZCAD window: {'title_re': '.*License.*|.*Agreement.*|.*Terms.*', 'backend': 'win32', 'visible_only': False}
+2025-05-09 19:39:01,511 - DEBUG - Waiting for EZCAD window: {'title_re': '.*License.*|.*Agreement.*|.*Terms.*', 'backend': 'win32', 'visible_only': False}
+2025-05-09 19:39:02,540 - DEBUG - Waiting for EZCAD window: {'title_re': '.*License.*|.*Agreement.*|.*Terms.*', 'backend': 'win32', 'visible_only': False}
+2025-05-09 19:39:03,571 - DEBUG - Waiting for EZCAD window: {'title_re': '.*License.*|.*Agreement.*|.*Terms.*', 'backend': 'win32', 'visible_only': False}
+2025-05-09 19:39:04,603 - DEBUG - Waiting for EZCAD window: {'title_re': '.*License.*|.*Agreement.*|.*Terms.*', 'backend': 'win32', 'visible_only': False}
+2025-05-09 19:39:06,259 - DEBUG - Waiting for EZCAD window: {'title_re': '.*License.*|.*Agreement.*|.*Terms.*', 'backend': 'win32', 'visible_only': False}
+2025-05-09 19:39:07,291 - DEBUG - Waiting for EZCAD window: {'title_re': '.*License.*|.*Agreement.*|.*Terms.*', 'backend': 'win32', 'visible_only': False}
+2025-05-09 19:39:08,321 - DEBUG - Waiting for EZCAD window: {'title_re': '.*License.*|.*Agreement.*|.*Terms.*', 'backend': 'win32', 'visible_only': False}
+2025-05-09 19:39:09,365 - DEBUG - Waiting for EZCAD window: {'title_re': '.*License.*|.*Agreement.*|.*Terms.*', 'backend': 'win32', 'visible_only': False}
+2025-05-09 19:39:10,396 - DEBUG - Waiting for EZCAD window: {'title_re': '.*License.*|.*Agreement.*|.*Terms.*', 'backend': 'win32', 'visible_only': False}
+2025-05-09 19:39:11,436 - DEBUG - Waiting for EZCAD window: {'title_re': '.*License.*|.*Agreement.*|.*Terms.*', 'backend': 'win32', 'visible_only': False}
+2025-05-09 19:39:11,437 - ERROR - Failed to connect to EZCAD window after launch
+2025-05-09 19:39:11,437 - ERROR - Failed to start EZCAD
+2025-05-09 19:39:23,371 - INFO - Stopping job processing...
+2025-05-09 19:39:23,371 - INFO - Closed 0 EZCAD instances
+2025-05-09 19:39:23,372 - INFO - Application closed
+2025-05-09 19:40:07,069 - INFO - Platform: Windows 10
+2025-05-09 19:40:15,716 - INFO - Loading Excel file: C:/Users/yunus/Desktop/Ezcad2.14.11(20230924)/names.xls
+2025-05-09 19:40:15,731 - INFO - Excel file loaded successfully: C:/Users/yunus/Desktop/Ezcad2.14.11(20230924)/names.xls
+2025-05-09 19:40:15,731 - DEBUG - Excel dimensions: 5 rows, 11 columns
+2025-05-09 19:40:21,043 - INFO - Selected EZD file: C:/Users/yunus/Desktop/DGAtestmakina2dekafiks.ezd
+2025-05-09 19:40:25,772 - INFO - Starting EZCAD2: C:/Users/yunus/Desktop/Ezcad2.14.11(20230924)/EzCad2.exe C:/Users/yunus/Desktop/DGAtestmakina2dekafiks.ezd
+2025-05-09 19:40:27,344 - DEBUG - Waiting for EZCAD window: {'title_re': '.*DGAtestmakina2dekafiks\\.ezd.*', 'backend': 'win32', 'visible_only': False}
+2025-05-09 19:40:28,382 - DEBUG - Waiting for EZCAD window: {'title_re': '.*License.*|.*Agreement.*|.*Terms.*', 'backend': 'win32', 'visible_only': False}
+2025-05-09 19:40:29,417 - DEBUG - Waiting for EZCAD window: {'title_re': '.*License.*|.*Agreement.*|.*Terms.*', 'backend': 'win32', 'visible_only': False}
+2025-05-09 19:40:30,447 - DEBUG - Waiting for EZCAD window: {'title_re': '.*License.*|.*Agreement.*|.*Terms.*', 'backend': 'win32', 'visible_only': False}
+2025-05-09 19:40:31,482 - DEBUG - Waiting for EZCAD window: {'title_re': '.*License.*|.*Agreement.*|.*Terms.*', 'backend': 'win32', 'visible_only': False}
+2025-05-09 19:40:32,513 - DEBUG - Waiting for EZCAD window: {'title_re': '.*License.*|.*Agreement.*|.*Terms.*', 'backend': 'win32', 'visible_only': False}
+2025-05-09 19:40:33,543 - DEBUG - Waiting for EZCAD window: {'title_re': '.*License.*|.*Agreement.*|.*Terms.*', 'backend': 'win32', 'visible_only': False}
+2025-05-09 19:40:34,571 - DEBUG - Waiting for EZCAD window: {'title_re': '.*License.*|.*Agreement.*|.*Terms.*', 'backend': 'win32', 'visible_only': False}
+2025-05-09 19:40:36,919 - DEBUG - Waiting for EZCAD window: {'title_re': '.*License.*|.*Agreement.*|.*Terms.*', 'backend': 'win32', 'visible_only': False}
+2025-05-09 19:40:37,954 - DEBUG - Waiting for EZCAD window: {'title_re': '.*License.*|.*Agreement.*|.*Terms.*', 'backend': 'win32', 'visible_only': False}
+2025-05-09 19:40:38,994 - DEBUG - Waiting for EZCAD window: {'title_re': '.*License.*|.*Agreement.*|.*Terms.*', 'backend': 'win32', 'visible_only': False}
+2025-05-09 19:40:40,037 - DEBUG - Waiting for EZCAD window: {'title_re': '.*License.*|.*Agreement.*|.*Terms.*', 'backend': 'win32', 'visible_only': False}
+2025-05-09 19:40:41,075 - DEBUG - Waiting for EZCAD window: {'title_re': '.*License.*|.*Agreement.*|.*Terms.*', 'backend': 'win32', 'visible_only': False}
+2025-05-09 19:40:42,115 - DEBUG - Waiting for EZCAD window: {'title_re': '.*License.*|.*Agreement.*|.*Terms.*', 'backend': 'win32', 'visible_only': False}
+2025-05-09 19:40:43,156 - DEBUG - Waiting for EZCAD window: {'title_re': '.*License.*|.*Agreement.*|.*Terms.*', 'backend': 'win32', 'visible_only': False}
+2025-05-09 19:40:43,156 - ERROR - Failed to connect to EZCAD window after launch
+2025-05-09 19:40:43,156 - ERROR - Failed to start EZCAD
+2025-05-09 19:44:10,556 - INFO - Platform: Windows 10
+2025-05-09 19:44:19,044 - INFO - Stopping job processing...
+2025-05-09 19:44:19,045 - INFO - Closed 0 EZCAD instances
+2025-05-09 19:44:19,046 - INFO - Application closed
+2025-05-09 19:47:10,480 - INFO - Platform: Windows 10
+2025-05-09 19:47:28,730 - INFO - Loading Excel file: C:/Users/yunus/Desktop/Ezcad2.14.11(20230924)/names.xls
+2025-05-09 19:47:28,746 - INFO - Excel file loaded successfully: C:/Users/yunus/Desktop/Ezcad2.14.11(20230924)/names.xls
+2025-05-09 19:47:28,746 - DEBUG - Excel dimensions: 5 rows, 11 columns
+2025-05-09 19:47:37,480 - INFO - Selected EZD file: C:/Users/yunus/Desktop/DGAtestmakina2dekafiks.ezd
+2025-05-09 19:47:53,843 - INFO - Processing Excel file: C:/Users/yunus/Desktop/Ezcad2.14.11(20230924)/names.xls
+2025-05-09 19:47:53,844 - INFO - Processing Excel file: C:/Users/yunus/Desktop/Ezcad2.14.11(20230924)/names.xls
+2025-05-09 19:47:53,845 - INFO - Loading Excel file: C:/Users/yunus/Desktop/Ezcad2.14.11(20230924)/names.xls
+2025-05-09 19:47:53,850 - INFO - Excel file loaded successfully: C:/Users/yunus/Desktop/Ezcad2.14.11(20230924)/names.xls
+2025-05-09 19:47:53,850 - DEBUG - Excel dimensions: 5 rows, 11 columns
+2025-05-09 19:47:54,574 - INFO - Starting EZCAD2: C:/Users/yunus/Desktop/Ezcad2.14.11(20230924)/EzCad2.exe C:/Users/yunus/Desktop/DGAtestmakina2dekafiks.ezd
+2025-05-09 19:47:56,255 - DEBUG - Waiting for EZCAD window: {'title_re': '.*DGAtestmakina2dekafiks\\.ezd.*', 'backend': 'win32', 'visible_only': False}
+2025-05-09 19:47:57,293 - DEBUG - Waiting for EZCAD window: {'title_re': '.*License.*|.*Agreement.*|.*Terms.*', 'backend': 'win32', 'visible_only': False}
+2025-05-09 19:47:58,319 - DEBUG - Waiting for EZCAD window: {'title_re': '.*License.*|.*Agreement.*|.*Terms.*', 'backend': 'win32', 'visible_only': False}
+2025-05-09 19:48:00,162 - DEBUG - Waiting for EZCAD window: {'title_re': '.*License.*|.*Agreement.*|.*Terms.*', 'backend': 'win32', 'visible_only': False}
+2025-05-09 19:48:01,223 - DEBUG - Waiting for EZCAD window: {'title_re': '.*License.*|.*Agreement.*|.*Terms.*', 'backend': 'win32', 'visible_only': False}
+2025-05-09 19:48:02,350 - DEBUG - Waiting for EZCAD window: {'title_re': '.*License.*|.*Agreement.*|.*Terms.*', 'backend': 'win32', 'visible_only': False}
+2025-05-09 19:48:03,977 - INFO - Starting EZCAD2: C:/Users/yunus/Desktop/Ezcad2.14.11(20230924)/EzCad2.exe C:/Users/yunus/Desktop/DGAtestmakina2dekafiks.ezd
+2025-05-09 19:48:04,010 - DEBUG - Waiting for EZCAD window: {'title_re': '.*License.*|.*Agreement.*|.*Terms.*', 'backend': 'win32', 'visible_only': False}
+2025-05-09 19:48:05,545 - DEBUG - Waiting for EZCAD window: {'title_re': '.*DGAtestmakina2dekafiks\\.ezd.*', 'backend': 'win32', 'visible_only': False}
+2025-05-09 19:48:05,575 - DEBUG - Waiting for EZCAD window: {'title_re': '.*DGAtestmakina2dekafiks\\.ezd.*', 'backend': 'win32', 'visible_only': False}
+2025-05-09 19:48:07,187 - DEBUG - Waiting for EZCAD window: {'title_re': '.*License.*|.*Agreement.*|.*Terms.*', 'backend': 'win32', 'visible_only': False}
+2025-05-09 19:48:07,667 - DEBUG - Waiting for EZCAD window: {'title_re': '.*License.*|.*Agreement.*|.*Terms.*', 'backend': 'win32', 'visible_only': False}
+2025-05-09 19:48:08,553 - DEBUG - Waiting for EZCAD window: {'title_re': '.*License.*|.*Agreement.*|.*Terms.*', 'backend': 'win32', 'visible_only': False}
+2025-05-09 19:48:08,703 - DEBUG - Waiting for EZCAD window: {'title_re': '.*License.*|.*Agreement.*|.*Terms.*', 'backend': 'win32', 'visible_only': False}
+2025-05-09 19:48:09,592 - DEBUG - Waiting for EZCAD window: {'title_re': '.*License.*|.*Agreement.*|.*Terms.*', 'backend': 'win32', 'visible_only': False}
+2025-05-09 19:48:09,730 - DEBUG - Waiting for EZCAD window: {'title_re': '.*License.*|.*Agreement.*|.*Terms.*', 'backend': 'win32', 'visible_only': False}
+2025-05-09 19:48:10,624 - DEBUG - Waiting for EZCAD window: {'title_re': '.*License.*|.*Agreement.*|.*Terms.*', 'backend': 'win32', 'visible_only': False}
+2025-05-09 19:48:10,781 - DEBUG - Waiting for EZCAD window: {'title_re': '.*License.*|.*Agreement.*|.*Terms.*', 'backend': 'win32', 'visible_only': False}
+2025-05-09 19:48:11,660 - DEBUG - Waiting for EZCAD window: {'title_re': '.*License.*|.*Agreement.*|.*Terms.*', 'backend': 'win32', 'visible_only': False}
+2025-05-09 19:48:11,816 - DEBUG - Waiting for EZCAD window: {'title_re': '.*License.*|.*Agreement.*|.*Terms.*', 'backend': 'win32', 'visible_only': False}
+2025-05-09 19:48:12,713 - DEBUG - Waiting for EZCAD window: {'title_re': '.*License.*|.*Agreement.*|.*Terms.*', 'backend': 'win32', 'visible_only': False}
+2025-05-09 19:48:12,851 - DEBUG - Waiting for EZCAD window: {'title_re': '.*License.*|.*Agreement.*|.*Terms.*', 'backend': 'win32', 'visible_only': False}
+2025-05-09 19:48:13,780 - DEBUG - Waiting for EZCAD window: {'title_re': '.*License.*|.*Agreement.*|.*Terms.*', 'backend': 'win32', 'visible_only': False}
+2025-05-09 19:48:13,890 - DEBUG - Waiting for EZCAD window: {'title_re': '.*License.*|.*Agreement.*|.*Terms.*', 'backend': 'win32', 'visible_only': False}
+2025-05-09 19:48:13,890 - ERROR - Failed to connect to EZCAD window after launch
+2025-05-09 19:48:13,891 - ERROR - Failed to start EZCAD
+2025-05-09 19:48:14,830 - DEBUG - Waiting for EZCAD window: {'title_re': '.*License.*|.*Agreement.*|.*Terms.*', 'backend': 'win32', 'visible_only': False}
+2025-05-09 19:48:15,865 - DEBUG - Waiting for EZCAD window: {'title_re': '.*License.*|.*Agreement.*|.*Terms.*', 'backend': 'win32', 'visible_only': False}
+2025-05-09 19:48:16,922 - DEBUG - Waiting for EZCAD window: {'title_re': '.*License.*|.*Agreement.*|.*Terms.*', 'backend': 'win32', 'visible_only': False}
+2025-05-09 19:48:17,960 - DEBUG - Waiting for EZCAD window: {'title_re': '.*License.*|.*Agreement.*|.*Terms.*', 'backend': 'win32', 'visible_only': False}
+2025-05-09 19:48:19,004 - DEBUG - Waiting for EZCAD window: {'title_re': '.*License.*|.*Agreement.*|.*Terms.*', 'backend': 'win32', 'visible_only': False}
+2025-05-09 19:48:20,042 - DEBUG - Waiting for EZCAD window: {'title_re': '.*License.*|.*Agreement.*|.*Terms.*', 'backend': 'win32', 'visible_only': False}
+2025-05-09 19:48:21,071 - DEBUG - Waiting for EZCAD window: {'title_re': '.*License.*|.*Agreement.*|.*Terms.*', 'backend': 'win32', 'visible_only': False}
+2025-05-09 19:48:21,072 - ERROR - Failed to connect to EZCAD window after launch
+2025-05-09 19:48:21,072 - ERROR - Failed to start EZCAD
+2025-05-09 19:51:59,892 - INFO - Stopping job processing...
+2025-05-09 19:51:59,892 - INFO - Closed 0 EZCAD instances
+2025-05-09 19:51:59,893 - INFO - Application closed
+2025-05-09 19:52:23,236 - INFO - Platform: Windows 10
+2025-05-09 19:52:37,421 - INFO - Loading Excel file: C:/Users/yunus/Desktop/Ezcad2.14.11(20230924)/names.xls
+2025-05-09 19:52:37,438 - INFO - Excel file loaded successfully: C:/Users/yunus/Desktop/Ezcad2.14.11(20230924)/names.xls
+2025-05-09 19:52:37,438 - DEBUG - Excel dimensions: 5 rows, 11 columns
+2025-05-09 19:52:44,623 - INFO - Selected EZD file: C:/Users/yunus/Desktop/DGAtestmakina2dekafiks.ezd
+2025-05-09 19:52:54,840 - INFO - Starting EZCAD2: C:/Users/yunus/Desktop/Ezcad2.14.11(20230924)/EzCad2.exe C:/Users/yunus/Desktop/DGAtestmakina2dekafiks.ezd
+2025-05-09 19:52:55,886 - DEBUG - Waiting for EZCAD window: {'title_re': '.*License.*|.*Agreement.*|.*Terms.*', 'backend': 'win32', 'visible_only': False}
+2025-05-09 19:52:56,945 - DEBUG - Waiting for EZCAD window: {'title_re': '.*License.*|.*Agreement.*|.*Terms.*', 'backend': 'win32', 'visible_only': False}
+2025-05-09 19:52:58,011 - DEBUG - Waiting for EZCAD window: {'title_re': '.*License.*|.*Agreement.*|.*Terms.*', 'backend': 'win32', 'visible_only': False}
+2025-05-09 19:52:59,410 - INFO - Starting EZCAD2: C:/Users/yunus/Desktop/Ezcad2.14.11(20230924)/EzCad2.exe C:/Users/yunus/Desktop/DGAtestmakina2dekafiks.ezd
+2025-05-09 19:52:59,436 - DEBUG - Waiting for EZCAD window: {'title_re': '.*License.*|.*Agreement.*|.*Terms.*', 'backend': 'win32', 'visible_only': False}
+2025-05-09 19:53:00,572 - DEBUG - Waiting for EZCAD window: {'title_re': '.*License.*|.*Agreement.*|.*Terms.*', 'backend': 'win32', 'visible_only': False}
+2025-05-09 19:53:00,974 - DEBUG - Waiting for EZCAD window: {'title_re': '.*DGAtestmakina2dekafiks\\.ezd.*', 'backend': 'win32', 'visible_only': False}
+2025-05-09 19:53:01,612 - DEBUG - Waiting for EZCAD window: {'title_re': '.*License.*|.*Agreement.*|.*Terms.*', 'backend': 'win32', 'visible_only': False}
+2025-05-09 19:53:02,009 - DEBUG - Waiting for EZCAD window: {'title_re': '.*License.*|.*Agreement.*|.*Terms.*', 'backend': 'win32', 'visible_only': False}
+2025-05-09 19:53:04,006 - DEBUG - Waiting for EZCAD window: {'title_re': '.*License.*|.*Agreement.*|.*Terms.*', 'backend': 'win32', 'visible_only': False}
+2025-05-09 19:53:04,122 - DEBUG - Waiting for EZCAD window: {'title_re': '.*License.*|.*Agreement.*|.*Terms.*', 'backend': 'win32', 'visible_only': False}
+2025-05-09 19:53:05,032 - DEBUG - Waiting for EZCAD window: {'title_re': '.*License.*|.*Agreement.*|.*Terms.*', 'backend': 'win32', 'visible_only': False}
+2025-05-09 19:53:05,158 - DEBUG - Waiting for EZCAD window: {'title_re': '.*License.*|.*Agreement.*|.*Terms.*', 'backend': 'win32', 'visible_only': False}
+2025-05-09 19:53:06,072 - DEBUG - Waiting for EZCAD window: {'title_re': '.*License.*|.*Agreement.*|.*Terms.*', 'backend': 'win32', 'visible_only': False}
+2025-05-09 19:53:06,199 - DEBUG - Waiting for EZCAD window: {'title_re': '.*License.*|.*Agreement.*|.*Terms.*', 'backend': 'win32', 'visible_only': False}
+2025-05-09 19:53:07,103 - DEBUG - Waiting for EZCAD window: {'title_re': '.*License.*|.*Agreement.*|.*Terms.*', 'backend': 'win32', 'visible_only': False}
+2025-05-09 19:53:07,228 - DEBUG - Waiting for EZCAD window: {'title_re': '.*License.*|.*Agreement.*|.*Terms.*', 'backend': 'win32', 'visible_only': False}
+2025-05-09 19:53:08,132 - DEBUG - Waiting for EZCAD window: {'title_re': '.*License.*|.*Agreement.*|.*Terms.*', 'backend': 'win32', 'visible_only': False}
+2025-05-09 19:53:08,257 - DEBUG - Waiting for EZCAD window: {'title_re': '.*License.*|.*Agreement.*|.*Terms.*', 'backend': 'win32', 'visible_only': False}
+2025-05-09 19:53:09,172 - DEBUG - Waiting for EZCAD window: {'title_re': '.*License.*|.*Agreement.*|.*Terms.*', 'backend': 'win32', 'visible_only': False}
+2025-05-09 19:53:09,298 - DEBUG - Waiting for EZCAD window: {'title_re': '.*License.*|.*Agreement.*|.*Terms.*', 'backend': 'win32', 'visible_only': False}
+2025-05-09 19:53:10,199 - DEBUG - Waiting for EZCAD window: {'title_re': '.*License.*|.*Agreement.*|.*Terms.*', 'backend': 'win32', 'visible_only': False}
+2025-05-09 19:53:10,337 - DEBUG - Waiting for EZCAD window: {'title_re': '.*License.*|.*Agreement.*|.*Terms.*', 'backend': 'win32', 'visible_only': False}
+2025-05-09 19:53:11,253 - DEBUG - Waiting for EZCAD window: {'title_re': '.*License.*|.*Agreement.*|.*Terms.*', 'backend': 'win32', 'visible_only': False}
+2025-05-09 19:53:11,397 - DEBUG - Waiting for EZCAD window: {'title_re': '.*License.*|.*Agreement.*|.*Terms.*', 'backend': 'win32', 'visible_only': False}
+2025-05-09 19:53:12,324 - DEBUG - Waiting for EZCAD window: {'title_re': '.*License.*|.*Agreement.*|.*Terms.*', 'backend': 'win32', 'visible_only': False}
+2025-05-09 19:53:12,324 - ERROR - Failed to connect to EZCAD window after launch
+2025-05-09 19:53:12,325 - ERROR - Failed to start EZCAD
+2025-05-09 19:53:12,454 - DEBUG - Waiting for EZCAD window: {'title_re': '.*License.*|.*Agreement.*|.*Terms.*', 'backend': 'win32', 'visible_only': False}
+2025-05-09 19:53:13,480 - DEBUG - Waiting for EZCAD window: {'title_re': '.*License.*|.*Agreement.*|.*Terms.*', 'backend': 'win32', 'visible_only': False}
+2025-05-09 19:53:14,515 - DEBUG - Waiting for EZCAD window: {'title_re': '.*License.*|.*Agreement.*|.*Terms.*', 'backend': 'win32', 'visible_only': False}
+2025-05-09 19:53:15,548 - DEBUG - Waiting for EZCAD window: {'title_re': '.*License.*|.*Agreement.*|.*Terms.*', 'backend': 'win32', 'visible_only': False}
+2025-05-09 19:53:16,634 - DEBUG - Waiting for EZCAD window: {'title_re': '.*License.*|.*Agreement.*|.*Terms.*', 'backend': 'win32', 'visible_only': False}
+2025-05-09 19:53:16,634 - ERROR - Failed to connect to EZCAD window after launch
+2025-05-09 19:53:16,635 - ERROR - Failed to start EZCAD
+2025-05-09 19:53:45,297 - INFO - Selected EZCAD executable: C:/Users/yunus/Desktop/Ezcad2.14.11(20230924)/EzCad2.exe
+2025-05-09 19:53:52,923 - INFO - Loading Excel file: C:/Users/yunus/Desktop/Ezcad2.14.11(20230924)/names.xls
+2025-05-09 19:53:52,947 - INFO - Excel file loaded successfully: C:/Users/yunus/Desktop/Ezcad2.14.11(20230924)/names.xls
+2025-05-09 19:53:52,947 - DEBUG - Excel dimensions: 5 rows, 11 columns
+2025-05-09 19:53:57,329 - INFO - Selected EZD file: C:/Users/yunus/Desktop/DGAtestmakina2dekafiks.ezd
+2025-05-09 19:54:02,441 - INFO - Starting EZCAD2: C:/Users/yunus/Desktop/Ezcad2.14.11(20230924)/EzCad2.exe C:/Users/yunus/Desktop/DGAtestmakina2dekafiks.ezd
+2025-05-09 19:54:04,013 - DEBUG - Waiting for EZCAD window: {'title_re': '.*DGAtestmakina2dekafiks\\.ezd.*', 'backend': 'win32', 'visible_only': False}
+2025-05-09 19:54:05,049 - DEBUG - Waiting for EZCAD window: {'title_re': '.*License.*|.*Agreement.*|.*Terms.*', 'backend': 'win32', 'visible_only': False}
+2025-05-09 19:54:06,080 - DEBUG - Waiting for EZCAD window: {'title_re': '.*License.*|.*Agreement.*|.*Terms.*', 'backend': 'win32', 'visible_only': False}
+2025-05-09 19:54:07,116 - DEBUG - Waiting for EZCAD window: {'title_re': '.*License.*|.*Agreement.*|.*Terms.*', 'backend': 'win32', 'visible_only': False}
+2025-05-09 19:54:08,153 - DEBUG - Waiting for EZCAD window: {'title_re': '.*License.*|.*Agreement.*|.*Terms.*', 'backend': 'win32', 'visible_only': False}
+2025-05-09 19:54:09,190 - DEBUG - Waiting for EZCAD window: {'title_re': '.*License.*|.*Agreement.*|.*Terms.*', 'backend': 'win32', 'visible_only': False}
+2025-05-09 19:54:10,224 - DEBUG - Waiting for EZCAD window: {'title_re': '.*License.*|.*Agreement.*|.*Terms.*', 'backend': 'win32', 'visible_only': False}
+2025-05-09 19:54:11,264 - DEBUG - Waiting for EZCAD window: {'title_re': '.*License.*|.*Agreement.*|.*Terms.*', 'backend': 'win32', 'visible_only': False}
+2025-05-09 19:54:12,312 - DEBUG - Waiting for EZCAD window: {'title_re': '.*License.*|.*Agreement.*|.*Terms.*', 'backend': 'win32', 'visible_only': False}
+2025-05-09 19:54:14,638 - DEBUG - Waiting for EZCAD window: {'title_re': '.*License.*|.*Agreement.*|.*Terms.*', 'backend': 'win32', 'visible_only': False}
+2025-05-09 19:54:15,665 - DEBUG - Waiting for EZCAD window: {'title_re': '.*License.*|.*Agreement.*|.*Terms.*', 'backend': 'win32', 'visible_only': False}
+2025-05-09 19:54:16,705 - DEBUG - Waiting for EZCAD window: {'title_re': '.*License.*|.*Agreement.*|.*Terms.*', 'backend': 'win32', 'visible_only': False}
+2025-05-09 19:54:17,740 - DEBUG - Waiting for EZCAD window: {'title_re': '.*License.*|.*Agreement.*|.*Terms.*', 'backend': 'win32', 'visible_only': False}
+2025-05-09 19:54:18,781 - DEBUG - Waiting for EZCAD window: {'title_re': '.*License.*|.*Agreement.*|.*Terms.*', 'backend': 'win32', 'visible_only': False}
+2025-05-09 19:54:19,818 - DEBUG - Waiting for EZCAD window: {'title_re': '.*License.*|.*Agreement.*|.*Terms.*', 'backend': 'win32', 'visible_only': False}
+2025-05-09 19:54:19,818 - ERROR - Failed to connect to EZCAD window after launch
+2025-05-09 19:54:19,818 - ERROR - Failed to start EZCAD
+2025-05-09 19:54:28,779 - INFO - Stopping job processing...
+2025-05-09 19:54:28,779 - INFO - Closed 0 EZCAD instances
+2025-05-09 19:54:28,780 - INFO - Application closed
+2025-05-09 19:58:46,256 - INFO - Platform: Windows 10
+2025-05-09 19:58:56,338 - INFO - Selected EZCAD executable: C:/Users/yunus/Desktop/Ezcad2.14.11(20230924)/EzCad2.exe
+2025-05-09 19:59:06,964 - INFO - Loading Excel file: C:/Users/yunus/Desktop/Ezcad2.14.11(20230924)/names.xls
+2025-05-09 19:59:06,980 - INFO - Excel file loaded successfully: C:/Users/yunus/Desktop/Ezcad2.14.11(20230924)/names.xls
+2025-05-09 19:59:06,981 - DEBUG - Excel dimensions: 5 rows, 11 columns
+2025-05-09 19:59:11,525 - INFO - Selected EZD file: C:/Users/yunus/Desktop/DGAtestmakina2dekafiks.ezd
+2025-05-09 19:59:18,828 - INFO - Processing Excel file: C:/Users/yunus/Desktop/Ezcad2.14.11(20230924)/names.xls
+2025-05-09 19:59:18,829 - INFO - Processing Excel file: C:/Users/yunus/Desktop/Ezcad2.14.11(20230924)/names.xls
+2025-05-09 19:59:18,830 - INFO - Loading Excel file: C:/Users/yunus/Desktop/Ezcad2.14.11(20230924)/names.xls
+2025-05-09 19:59:18,834 - INFO - Excel file loaded successfully: C:/Users/yunus/Desktop/Ezcad2.14.11(20230924)/names.xls
+2025-05-09 19:59:18,835 - DEBUG - Excel dimensions: 5 rows, 11 columns
+2025-05-09 19:59:18,835 - INFO - EZCAD exe_path: C:/Users/yunus/Desktop/Ezcad2.14.11(20230924)/EzCad2.exe
+2025-05-09 19:59:18,836 - INFO - EZD file: C:/Users/yunus/Desktop/DGAtestmakina2dekafiks.ezd
+2025-05-09 19:59:19,522 - INFO - Starting EZCAD2: C:/Users/yunus/Desktop/Ezcad2.14.11(20230924)/EzCad2.exe C:/Users/yunus/Desktop/DGAtestmakina2dekafiks.ezd
+2025-05-09 19:59:21,114 - DEBUG - Waiting for EZCAD window: {'title_re': '.*DGAtestmakina2dekafiks\\.ezd.*', 'backend': 'win32', 'visible_only': False}
+2025-05-09 19:59:22,174 - DEBUG - Waiting for EZCAD window: {'title_re': '.*License.*|.*Agreement.*|.*Terms.*', 'backend': 'win32', 'visible_only': False}
+2025-05-09 19:59:23,207 - DEBUG - Waiting for EZCAD window: {'title_re': '.*License.*|.*Agreement.*|.*Terms.*', 'backend': 'win32', 'visible_only': False}
+2025-05-09 19:59:24,240 - DEBUG - Waiting for EZCAD window: {'title_re': '.*License.*|.*Agreement.*|.*Terms.*', 'backend': 'win32', 'visible_only': False}
+2025-05-09 19:59:25,277 - DEBUG - Waiting for EZCAD window: {'title_re': '.*License.*|.*Agreement.*|.*Terms.*', 'backend': 'win32', 'visible_only': False}
+2025-05-09 19:59:26,311 - DEBUG - Waiting for EZCAD window: {'title_re': '.*License.*|.*Agreement.*|.*Terms.*', 'backend': 'win32', 'visible_only': False}
+2025-05-09 19:59:27,351 - DEBUG - Waiting for EZCAD window: {'title_re': '.*License.*|.*Agreement.*|.*Terms.*', 'backend': 'win32', 'visible_only': False}
+2025-05-09 19:59:28,381 - DEBUG - Waiting for EZCAD window: {'title_re': '.*License.*|.*Agreement.*|.*Terms.*', 'backend': 'win32', 'visible_only': False}
+2025-05-09 19:59:29,420 - DEBUG - Waiting for EZCAD window: {'title_re': '.*License.*|.*Agreement.*|.*Terms.*', 'backend': 'win32', 'visible_only': False}
+2025-05-09 19:59:32,152 - DEBUG - Waiting for EZCAD window: {'title_re': '.*License.*|.*Agreement.*|.*Terms.*', 'backend': 'win32', 'visible_only': False}
+2025-05-09 19:59:33,217 - DEBUG - Waiting for EZCAD window: {'title_re': '.*License.*|.*Agreement.*|.*Terms.*', 'backend': 'win32', 'visible_only': False}
+2025-05-09 19:59:34,285 - DEBUG - Waiting for EZCAD window: {'title_re': '.*License.*|.*Agreement.*|.*Terms.*', 'backend': 'win32', 'visible_only': False}
+2025-05-09 19:59:35,330 - DEBUG - Waiting for EZCAD window: {'title_re': '.*License.*|.*Agreement.*|.*Terms.*', 'backend': 'win32', 'visible_only': False}
+2025-05-09 19:59:36,370 - DEBUG - Waiting for EZCAD window: {'title_re': '.*License.*|.*Agreement.*|.*Terms.*', 'backend': 'win32', 'visible_only': False}
+2025-05-09 19:59:37,407 - DEBUG - Waiting for EZCAD window: {'title_re': '.*License.*|.*Agreement.*|.*Terms.*', 'backend': 'win32', 'visible_only': False}
+2025-05-09 19:59:37,407 - ERROR - Failed to connect to EZCAD window after launch
+2025-05-09 19:59:37,408 - ERROR - Failed to start EZCAD
+2025-05-09 20:00:22,839 - INFO - Job processor 0 started
+2025-05-09 20:00:22,840 - INFO - Started 1 job processing threads
+2025-05-09 20:00:22,840 - INFO - Started job processing
+2025-05-09 20:00:22,840 - DEBUG - Refreshed job list with 0 jobs
+2025-05-09 20:02:00,080 - INFO - Platform: Windows 10
+2025-05-09 20:02:11,017 - INFO - Selected EZCAD executable: C:/Users/yunus/Desktop/Ezcad2.14.11(20230924)/EzCad2.exe
+2025-05-09 20:02:18,344 - INFO - Loading Excel file: C:/Users/yunus/Desktop/Ezcad2.14.11(20230924)/names.xls
+2025-05-09 20:02:18,361 - INFO - Excel file loaded successfully: C:/Users/yunus/Desktop/Ezcad2.14.11(20230924)/names.xls
+2025-05-09 20:02:18,361 - DEBUG - Excel dimensions: 5 rows, 11 columns
+2025-05-09 20:02:22,470 - INFO - Selected EZD file: C:/Users/yunus/Desktop/DGAtestmakina2dekafiks.ezd
+2025-05-09 20:02:36,581 - INFO - Platform: Windows 10
+2025-05-09 20:02:40,327 - INFO - Stopping job processing...
+2025-05-09 20:02:40,328 - INFO - Closed 0 EZCAD instances
+2025-05-09 20:02:40,329 - INFO - Application closed
+2025-05-09 20:09:45,173 - INFO - Platform: Windows 10
+2025-05-09 20:09:57,140 - INFO - Selected EZCAD executable: C:/Users/yunus/Desktop/Ezcad2.14.11(20230924)/EzCad2.exe
+2025-05-09 20:10:33,141 - INFO - Loading Excel file: C:/Users/yunus/Desktop/Ezcad2.14.11(20230924)/names.xls
+2025-05-09 20:10:33,156 - INFO - Excel file loaded successfully: C:/Users/yunus/Desktop/Ezcad2.14.11(20230924)/names.xls
+2025-05-09 20:10:33,157 - DEBUG - Excel dimensions: 5 rows, 11 columns
+2025-05-09 20:10:39,171 - INFO - Selected EZD file: C:/Users/yunus/Desktop/DGAtestmakina2dekafiks.ezd
