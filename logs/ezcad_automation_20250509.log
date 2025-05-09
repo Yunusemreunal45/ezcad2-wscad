@@ -641,3 +641,19 @@ Traceback (most recent call last):
     self.process_button = ttk.Button(control_frame, text="Process Excel", command=self.process_excel)
                                                                                   ^^^^^^^^^^^^^^^^^^
 AttributeError: 'EZCADAutomationApp' object has no attribute 'process_excel'
+2025-05-09 18:02:28,030 - WARNING - Running in non-Windows environment. EZCAD features will be simulated.
+2025-05-09 18:02:28,053 - CRITICAL - Unhandled exception
+Traceback (most recent call last):
+  File "/home/runner/workspace/main.py", line 84, in <module>
+    main()
+  File "/home/runner/workspace/main.py", line 75, in main
+    app = EZCADAutomationApp(root)
+          ^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/runner/workspace/ezcad_automation.py", line 44, in __init__
+    self._create_ui()
+  File "/home/runner/workspace/ezcad_automation.py", line 67, in _create_ui
+    self._create_monitor_tab(monitor_tab)
+  File "/home/runner/workspace/ezcad_automation.py", line 195, in _create_monitor_tab
+    self.start_monitoring_button = ttk.Button(monitor_control_frame, text="Start Monitoring", command=self._start_monitoring)
+                                                                                                      ^^^^^^^^^^^^^^^^^^^^^^
+AttributeError: 'EZCADAutomationApp' object has no attribute '_start_monitoring'
