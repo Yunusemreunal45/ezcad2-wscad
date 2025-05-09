@@ -411,3 +411,21 @@
 2025-05-09 20:10:33,156 - INFO - Excel file loaded successfully: C:/Users/yunus/Desktop/Ezcad2.14.11(20230924)/names.xls
 2025-05-09 20:10:33,157 - DEBUG - Excel dimensions: 5 rows, 11 columns
 2025-05-09 20:10:39,171 - INFO - Selected EZD file: C:/Users/yunus/Desktop/DGAtestmakina2dekafiks.ezd
+2025-05-09 17:37:31,541 - INFO - Platform: Linux 6.2.16
+2025-05-09 17:37:31,541 - WARNING - Running in non-Windows environment. EZCAD automation will run in simulation mode.
+2025-05-09 17:37:31,541 - WARNING - Running in non-Windows environment. EZCAD automation will run in simulation mode.
+2025-05-09 17:37:31,563 - CRITICAL - Unhandled exception
+Traceback (most recent call last):
+  File "/home/runner/workspace/main.py", line 84, in <module>
+    main()
+  File "/home/runner/workspace/main.py", line 75, in main
+    app = EZCADAutomationApp(root)
+          ^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/runner/workspace/ezcad_automation_compat.py", line 57, in __init__
+    self._create_ui()
+  File "/home/runner/workspace/ezcad_automation_compat.py", line 75, in _create_ui
+    self._create_main_tab(main_tab)
+  File "/home/runner/workspace/ezcad_automation_compat.py", line 158, in _create_main_tab
+    self.process_button = ttk.Button(control_frame, text="Process Excel", command=self._process_excel)
+                                                                                  ^^^^^^^^^^^^^^^^^^^
+AttributeError: 'EZCADAutomationApp' object has no attribute '_process_excel'
