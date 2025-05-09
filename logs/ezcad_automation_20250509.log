@@ -657,3 +657,4 @@ Traceback (most recent call last):
     self.start_monitoring_button = ttk.Button(monitor_control_frame, text="Start Monitoring", command=self._start_monitoring)
                                                                                                       ^^^^^^^^^^^^^^^^^^^^^^
 AttributeError: 'EZCADAutomationApp' object has no attribute '_start_monitoring'
+2025-05-09 18:05:00,811 - WARNING - Running in non-Windows environment. EZCAD features will be simulated.
