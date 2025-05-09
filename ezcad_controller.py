@@ -150,14 +150,14 @@ class EZCADController:
                     for attempt in range(max_attempts):
                         window.set_focus()
                         time.sleep(0.5)
-                        
+
                         if window.is_active():
                             break
-                            
+
                         if attempt == max_attempts - 1:
                             self.logger.error("Failed to activate EZCAD window after multiple attempts")
                             return False
-                            
+
                         time.sleep(1.0)
 
                     command = command.lower()
@@ -168,7 +168,7 @@ class EZCADController:
                         self.logger.info(f"Sent RED command to window {window_id}")
                         time.sleep(1.0)  # Wait for command to take effect
                         return True
-                        
+
                     elif command == 'mark':
                         window.set_focus()
                         time.sleep(0.5)
@@ -176,20 +176,13 @@ class EZCADController:
                         self.logger.info(f"Sent MARK command to window {window_id}")
                         time.sleep(1.0)  # Wait for command to take effect
                         return True
-                        
+
                     else:
                         self.logger.warning(f"Unknown command: {command}")
                         return False
 
                 except Exception as e:
-                    self.logger.error(f"Window control error: {str(e)}")
-                    return False
-
-        except Exception as e:
-            self.logger.error(f"Error sending command {command} to window {window_id}: {str(e)}")
-            return False
-                else:
-                    self.logger.warning(f"Unknown command: {command}")
+                    self.logger.error(f"Error sending command {command} to window {window_id}: {str(e)}")
                     return False
 
         except Exception as e:
