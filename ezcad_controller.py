@@ -52,17 +52,34 @@ class EZCADController:
                 return None
 
             window_id = None
-            for _ in range(15):
+            # First try to find and handle the I Agree dialog
+            for _ in range(5):  # Try for 5 seconds
                 time.sleep(1)
                 try:
-                    # Try to find and handle the I Agree dialog first
-                    try:
-                        agree_app = Application().connect(title_re=".*I Agree.*")
-                        agree_window = agree_app.top_window()
-                        agree_window.type_keys("{ENTER}")
+                    agree_app = Application().connect(title_re=".*I Agree.*", timeout=1)
+                    agree_window = agree_app.top_window()
+                    if agree_window.is_visible():
+                        # Try multiple ways to close the dialog
+                        try:
+                            agree_window.type_keys("{ENTER}")
+                        except:
+                            try:
+                                agree_window.type_keys(" ")  # Space key
+                            except:
+                                try:
+                                    agree_button = agree_window.child_window(title="I Agree")
+                                    agree_button.click()
+                                except:
+                                    pass
                         time.sleep(0.5)
-                    except:
-                        pass
+                        break
+                except:
+                    continue
+
+            # Then look for the main EZCAD window
+            for _ in range(10):
+                time.sleep(1)
+                try:
 
                     if ezd_file:
                         ezd_name = os.path.basename(ezd_file).replace(".", "\.")
