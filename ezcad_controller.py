@@ -109,9 +109,9 @@ class EZCADController:
                     self.logger.info(f"Sent MARK command to window {window_id}")
                     time.sleep(0.5)
                     return True
-
-                self.logger.warning(f"Unknown command: {command}")
-                return False
+                else:
+                    self.logger.warning(f"Unknown command: {command}")
+                    return False
 
         except Exception as e:
             self.logger.error(f"Error sending command {command} to window {window_id}: {str(e)}")

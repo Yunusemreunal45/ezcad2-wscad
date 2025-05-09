@@ -1,49 +1,30 @@
 import platform
-import logging
-import os
 import sys
 
-# Global platform detection
-IS_WINDOWS = platform.system() == 'Windows'
+IS_WINDOWS = platform.system().lower() == 'windows'
+IS_LINUX = platform.system().lower() == 'linux'
+IS_MAC = platform.system().lower() == 'darwin'
 
 class PlatformUtils:
-    """Utility class to handle platform-specific operations"""
-    
     @staticmethod
     def is_windows():
-        """Check if running on Windows"""
         return IS_WINDOWS
-    
+
     @staticmethod
-    def get_logger():
-        """Get a logger for platform utilities"""
-        return logging.getLogger('EZCADAutomation')
-    
+    def is_linux():
+        return IS_LINUX
+
     @staticmethod
-    def get_platform_info():
-        """Get detailed platform information"""
-        info = {
+    def is_mac():
+        return IS_MAC
+
+    @staticmethod
+    def get_system_info():
+        return {
             'system': platform.system(),
             'release': platform.release(),
             'version': platform.version(),
             'machine': platform.machine(),
             'processor': platform.processor(),
-            'python_version': platform.python_version(),
-            'architecture': platform.architecture()[0],
+            'python_version': sys.version
         }
-        
-        return f"{info['system']} {info['release']} ({info['architecture']}), Python {info['python_version']}"
-
-class WinCompatMock:
-    """Mock class for Windows-specific functions in non-Windows environments"""
-    
-    def __init__(self, logger=None):
-        """Initialize with optional logger"""
-        self.logger = logger or PlatformUtils.get_logger()
-        if not IS_WINDOWS:
-            self.logger.warning("Running in non-Windows environment. EZCAD automation will run in simulation mode.")
-    
-    def mock_function(self, function_name, *args, **kwargs):
-        """Generic mock function that logs the call and returns a success result"""
-        self.logger.info(f"SIMULATION: Called {function_name} with args={args} kwargs={kwargs}")
-        return True
